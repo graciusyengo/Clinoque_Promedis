@@ -1,0 +1,806 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About</title>
+<style>
+  .navbar .nav-linkPage {
+    color: #333;
+    text-decoration: none;
+  }
+
+  .navbar .nav-linkPage.active {
+    color: #007bff;
+    font-weight: bold;
+  }
+  </style>
+
+  
+  
+
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link
+    href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+    rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
+  <link href="assets/vendor/animate.css/animate.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link href="assets/css/about.css" rel="stylesheet">
+
+
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+  </script>
+
+  <script type="text/javascript">
+    (function () {
+      emailjs.init({
+        publicKey: "UZF1ohsXpSwqR_Nyk",
+      });
+    })();
+
+  </script>
+  <script src="script1.js"></script>
+  <script src="script.js"></script>
+
+
+</head>
+
+<body>
+
+  <!-- ======= Top Bar ======= -->
+  <div id="topbar" class="d-flex align-items-center fixed-top">
+    <div class="container d-flex justify-content-between">
+      <div class="contact-info d-flex align-items-center">
+        <i class="bi bi-envelope"></i> <a href="mailto:contact@example.com">cliniquepromedis@gmail.com</a>
+        <i class="bi bi-phone"></i> + 24389980029
+      </div>
+      <div class="d-none d-lg-flex social-links align-items-center">
+        <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
+        <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
+        <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
+        <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></i></a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top">
+    <div class="container d-flex align-items-center">
+
+
+      <!-- Uncomment below if you prefer to use an image logo -->
+      <a href="index.html" class="logo me-auto"><img src="assets/img/logo.jpeg" alt="" class="img-fluid"></a>
+
+      <nav id="navbar" class="navbar order-last order-lg-0">
+        <ul>
+          <li><a class="nav-link scrollto active" href="./index.html">Accueil</a></li>
+          <li><a class="nav-link scrollto" href="./about.html">A propos</a></li>
+          <li><a class="nav-link scrollto" href="./succursales.html">Succursales</a></li>
+          <li><a class="nav-link scrollto" href="./index.html#departments">Departements</a> </i></li>
+          <li><a class="nav-link scrollto" href="./index.html#doctors">Medecins</a></li>
+          <li class="dropdown"><a href=" ./index.html#services"><span>Services</span> <i class="bi bi-chevron-down"></i></a>
+
+            <ul>
+              <li>
+                <a href="./generalConsultaion.html">Consultation Generale  24/24</a>
+              </li>
+              <li>
+                <a href="/consultationSpecialise.html">Consultations spécialisés </a>
+              </li>
+              <li>
+              <a href="/pediatrie">
+              Pédiatrie 
+              </a>
+              </li>
+              
+              <li>
+              <a href="/gynecologie">
+                Gynecologie
+              </a>
+              </li>
+            
+              <li>
+                <a href="/internalMedecine">Médecine Interne  </a>
+              </li>
+              <li>
+                <a href="/ophtamologie">Ophtamologie </a>
+              </li>
+              <li>
+                <a href="/dermatologie">Dérmatologie </a>
+              </li>
+              <li>
+                <a href="/orthopedie">Orthopédie </a>
+              </li>
+              <li>
+                <a href="#">Neuropychiatrie </a>
+              </li>
+              <li>
+                <a href="#">ORL </a>
+              </li>
+              <li>
+                <a href="#">Dentisterie </a>
+              </li>
+              <li>
+                <a href="#">Urologie </a>
+              </li>
+              <li>
+                <a href="#">Cardiologie </a>
+              </li>
+              <li>
+                <a href="#">CPN CPS </a>
+              </li>
+            </ul>
+          </li>
+          <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+     
+      </nav><!-- .navbar -->
+
+      <div class="btn-contact">
+
+      <a href="#appointment" class="appointment-btn scrollto"><span class="d-none d-md-inline"></span> Prenez un
+        rendez-vous
+
+        
+      </a>
+      <div class="iconWhatsapp" onclick="whatsappRedirect()"> <i class='fab fa-whatsapp-square'></i>
+      </div>
+    </div>
+   
+
+    </div>
+  </header><!-- End Header -->
+
+  <!-- ======= Hero Section ======= -->
+  <section id="hero" class="d-flex align-items-center">
+    <div class="container">
+      <h1>A PROPOS DE NOUS </h1>
+    </div>
+  </section><!-- End Hero -->
+  <main id="main">
+
+
+    <div class="service">
+      <div class="sidebar">
+        <div class="title">
+          <h5 class="know"> QUI SOMMES NOUS</h5>
+          <h6 class="name"> CLINIQUE PROMEDIS </h6>
+        </div>
+        <ul>
+
+          <li>
+            <a href="#atout">Historique</a>
+          </li>
+          <li>
+            <a href="#atout">Nos atout</a>
+          </li>
+          <li>
+            <a href="#objectifs">Objectifs</a>
+          </li>
+
+          <li>
+            <a href="#service">Horaire de service</a>
+          </li>
+          <li>
+            <a href="#conventions">Convention Medicale</a>
+          </li>
+          <li>
+            <a href="#partenaires">Nos Partenaires</a>
+          </li>
+          <li>
+            <a href="#effectifs">Effectif du Personnel</a>
+          </li>
+          <li>
+            <a href="#contact">Nos Contact à Etranger</a>
+          </li>
+          <li>
+            <Link href="#galerie">Galerie</Link>
+          </li>
+        </ul>
+      </div>
+      <div class="presentation">
+
+        <h3 id="atout" style="font-weight: 700;">
+
+          QUI SOMMES NOUS
+        </h3>
+        <p class="paragraphe">
+          La clinique promedis est située sur la 10eme Rue Quartier industriel dans la commune de Limete.
+        </p>
+        <p class="paragraphe">
+
+          Elle est l'initiative de son administrateur Medecin Directeur, Docteur Nicola NDUKUTE NGANSER et a été
+          inaugurée
+          le 1 er Mais 1995.
+        </p>
+
+        <p class="paragraphe">
+
+          Elle est abritée dans ses propres installation, en diagonal de l'ex residence de l'artiste musicien Tabu Ley
+          Rochero aujourd'hui IPG (Institut Superieur du Pétrole et du Gaz) et est porteuse d'une grande expérience
+          partant du C entre Progrès Médicale S.P.R.L.
+        </p>
+        <p class="paragraphe">La Clinique Promedis a gardé ce nom jusqu'en 2003</p>
+        <div>
+
+          <h3 style="font-weight: 700;"> HISTORIQUE</h3>
+          <p className={styles.paragraphe}>
+            La Clinique Promedis est l’œuvre du Docteur Nicolas Ndukute Nganser, L’Administrateur Médecin Directeur
+            depuis le 01 mai 1995. </p>
+          <p className={styles.paragraphe}>
+            Elle a fonctionné successivement :
+          </p>
+
+          <ul>
+            <li className={styles.adress}>
+              <BsDiamondFill className={styles.diamand} />De mai 1995 à octobre 1996 sur l’avenue Kalengo, au quartier
+              Agricole dans la commune de Limete.
+            </li>
+            <li className={styles.adress}>
+              <BsDiamondFill className={styles.diamand} />D’octobre 1996 à novembre 1998 sur la 12ème Rue, au quartier
+              Résidentiel dans la commune de Limete.
+            </li>
+            <li className={styles.adress}>
+              <BsDiamondFill className={styles.diamand} />De novembre 1998 à Août 2003 sur la 8ème Rue, au quartier
+              Industriel dans la commune de Limete.
+            </li>
+            <li className={styles.adress}>
+              <BsDiamondFill className={styles.diamand} /> D’août 2003 à ce jour, sur la 10ème Rue, au quartier
+              Industriel dans la commune de Limete.
+            </li>
+          </ul>
+          <p className={styles.paragraphe}>Au début jusqu’en 2013, la Clinique Promedis ne fonctionnait que sur un seul
+            site. </p>
+          <p>C’est à partir de 2013 qu’au regard des exigences de ses nombreux patients que la Clinique a été obligée de
+            créer des extensions pour répondre aux besoins de ses nombreux patients.</p>
+
+          <p>C’est à partir de 2013 qu’au regard des exigences de ses nombreux patients que la Clinique a été obligée de
+            créer des extensions pour répondre aux besoins de ses nombreux patients.</p>
+
+          <p>C’est ainsi que la Clinique se trouve dans d’autres communes de la capitale telles que : </p>
+
+          <ul>
+            <li className={styles.year}>L’extension de Debonhomme au numéro 114 de l’avenue Tshiboko dans la commune de
+              Matete créée en 2013</li>
+            <li className={styles.year}>L’extension V.I.P au numéro 22 D, 10ème Rue, quartier Industriel dans la commune
+              de Limete en Novembre 2014.</li>
+            <li className={styles.year}>L’extension de Kinkole au numéro 02 de l’avenue Kakenza dans la commune de
+              N’sele créée en 2015.</li>
+            <li className={styles.year}> L’extension de Ngaliema au numéro 02 de l’avenue Makutu dans la commune de
+              Ngaliema créée en juillet 2016.</li>
+            <li className={styles.year}> L’extension de la Cité Verte à la villa 3, 12ème Rue dans la commune de
+              Selembao créée en mai 2018.</li>
+            <li className={styles.year}>L’extension de la Gombe au numéro 56 de l’avenue Bas Congo dans la commune de la
+              Gombe créée en juillet 2018.</li>
+          </ul>
+          <p class="paragraphe">La Clinique Promedis est dans la zone de santé de Limete, district sanitaire de Kalamu,
+            dans l’air de santé Industriel 2. Elle fonctionne 24h/24 avec deux Ambulances en permanences.</p>
+
+        </div>
+
+        <h3 style="font-weight: 700;">
+
+          NOS ATOUT
+        </h3>
+
+        <h4 style="font-weight: 500;">
+          RESSOURCES HUMAINES
+        </h4>
+        <p class="paragraphe">
+          la Cliique Promedis est une hopital qui as des personnelles
+          qualifié entre autres les medecins géneralistes et Spécialistes
+          qualifiés oeuvrant avec amour , competences et dévouement; Les
+          infirmirers et infirmier, des laboratins et technicien de Radio
+          tres expérimentés Un personnel admnistratifs, dévoué,serviables et
+          Professionnels Les techniciens de surface assidus
+        </p>
+
+        <h4 style="font-weight: 500;">
+          EQUIPEMENTS:
+        </h4>
+        <ul>
+          <li class="list">
+            Appareil D'echographie, de Radiographie et
+            D'electrocardiogramme;
+          </li>
+          <li class="list">
+            Appareil Monitoring foetal;
+          </li>
+          <li class="list">- Laboratoire Complet</li>
+          <li class="list">
+            Une salle d'Operation équipée pour diverses interventions;
+          </li>
+          <li class="list">
+            Une salle d'Operation équipée pour diverses interventions;
+          </li>
+          <li class="list">
+            Des chambres VIP, Privées, Semi-privées, Standard et
+            Communes;
+          </li>
+          <li class="list">
+            Des ambulances pour évacuation des malades.
+          </li>
+        </ul>
+
+        <div>
+          <h4 style="font-weight: 500;">
+            EXPERIENCE:
+          </h4>
+          <ul>
+            <li class={styles.list}>Une expérience de plus de 20 ans acquise dans la medecine privée</li>
+            <li class={styles.list}>Des Medecins et Infirmiers ayant fait carriere dans la profession et dans la
+              medecine
+              privée.</li>
+          </ul>
+        </div>
+        <h3 id="service" style="font-weight: 700;">
+
+          OBJECTIFS
+        </h3>
+
+        <p class="paragraphe">
+          Comme toutes institution à caractere sanitaire, la Cliique Promedis a plusieurs objectifs notammment :
+        </p>
+
+
+        <ul>
+          <li class="list">
+            Soigner les malades dans leur ensemble avec toutes les exigences de l'art de guerir.
+          </li>
+          <li class={styles.list}>
+            Prendre en charge les malades quelques soient leurs rang social.
+          </li>
+          <li class="list">- Former et informer les malades sur les risques pouvant engager ceux-ci.</li>
+          <li class="list">
+            Faire la medecines de masse c'est-à-dire suivre les malades là ou ils se trouvent ce qui justifient
+            d'ailleurs
+            le nombre d'extension dans la ville
+          </li>
+
+        </ul>
+
+
+        <div>
+          <h3 id="conventions" style="font-weight: 700;">
+
+            HORAIRE DE SERVICE
+          </h3>
+          <ul>
+            <li class="list">
+              Consultations génèrales, Laboratoire: 24H/24
+            </li>
+            <li class="list">
+              Consultations spécialisées : Selon L'horaire affiché
+            </li>
+            <li class="list">- Une équipe de garde composée de médecins, infirmiers, laboratins, anesthesistes,
+              chauffeur de
+              garde et agents de sécurité spécialisés </li>
+            <li class="list">
+              Etablissements d'enseignements
+            </li>
+            <li class="list">
+              Publics et Privés (maternelle, primaire, secondaire, Superieur)
+            </li>
+            <li class="list">
+              Mutualités et Eglises
+            </li>
+            <li class={styles.list}>
+              socièté, entreprises, publics et privées
+            </li>
+            <li class={styles.list}>
+              Expatriés
+            </li>
+
+          </ul>
+        </div>
+        <h3 id="partenaires" style="font-weight: 700 ;">
+
+          CONVENTIONS MÉDICALES
+        </h3>
+
+        <div>
+          <h5 style="font-weight: 500;"> - Facturation</h5>
+
+          <h6 style="font-weight: 400;">Au cas par cas</h6>
+          <p>UNe facture reprenant les soins et services dont le malade a réellement beneficiés au cours du mois</p>
+
+          <h6 style="font-weight: 400;">Forfaitaire</h5>
+            <p>L'abonné paie un montant mensuel qui englobe un nombre des prestations préablement négociées</p>
+
+            <h5 style="font-weight: 500;">- Projet de convention médicale</h5>
+
+            <p>à la démande</p>
+        </div>
+        <h3 id="effectifs" style="font-weight: 700;">
+
+          NOS PARTENAIRES
+        </h3>
+
+        <ul>
+          <li class="list">
+            Patient Privés
+          </li>
+          <li class={styles.list}>
+            Famille et Particuliers
+          </li>
+          <li class="list">Membres et Travailleurs des ONG ET Associations </li>
+          <li class="list">
+            Etablissements d'enseignements
+          </li>
+          <li class="list">
+            Publics et Privés (maternelle, primaire, secondaire, Superieur)
+          </li>
+          <li class="list">
+            Mutualités et Eglises
+          </li>
+          <li class="list">
+            socièté, entreprises, publics et privées
+          </li>
+          <li class="list">
+            Expatriés
+          </li>
+        </ul>
+
+
+        <h3 style="font-weight: 700;">
+          EFFECTIFS DU PERSONNELS
+        </h3>
+
+        <div>
+          <h4>42 Médecins dont :</h4>
+          <ul>
+            <li class="list">
+              20 Médecins Généralistes pour des Gardes.
+            </li>
+            <li class="list">
+              7 Médecins Permanents.
+            </li>
+            <li class="list">15 Médecins Spécialistes. </li>
+          </ul>
+          <h4>102 Infirmières et Infirmiers qualifiés.:</h4>
+          <h4>18 Agents Administratifs</h4>
+          <h4 id="contact">15 Techniciens de Laboratoire</h4>
+          <h4>3 Kinésithérapeutes</h4>
+          <h4>5 Techniciens de Radio</h4>
+          <h4>4 Anesthésistes</h4>
+          <h4>16 Techniciens de Surfaces</h4>
+        </div>
+        <h3 id="galerie" style="font-weight: 700;margin-top: 50px;">
+          NOS CONTACTS A L'ETRANGER
+        </h3>
+
+
+        <div class="foreignContact">
+
+          <div class="infos">
+            <div class="country">
+
+              Belgique
+            </div>
+
+            <div class="item">
+              <div class="icon">
+                <span class="fa fa-phone"> </span>
+              </div>
+              <div class="coordonné">
+                <div class="name">Mme Chantal Basoka</div>
+                <div class="number"> + 32 478 976 274</div>
+              </div>
+
+            </div>
+          </div>
+
+
+
+          <div class="infos">
+
+            <div class="country">
+
+              France
+            </div>
+
+            <div class="item">
+              <div class="icon"> <span class="fa fa-phone"> </span></div>
+              <div>
+                <div class="name">Patience Mawaka</div>
+                <div class="number"> + 33 662 685 071 </div>
+              </div>
+
+            </div>
+
+          </div>
+          <div class="infos">
+
+            <div class="country">
+
+              Allemagne
+            </div>
+
+            <div class="item">
+              <div class="icon"> <span class="fa fa-phone"> </span></div>
+              <div>
+                <div class="name">Mme Josephine Makitu</div>
+                <div class="number"> + 49 176 375 544 40</div>
+              </div>
+
+            </div>
+
+          </div>
+          <div class="infos">
+
+            <div class="country">
+
+              Chine
+            </div>
+
+            <div class="item">
+              <div class="icon"> <span class="fa fa-phone"> </span></div>
+              <div>
+                <div class="name">Claude Mwamba</div>
+                <div class="number"> + 86 138 088 267 14</div>
+              </div>
+
+            </div>
+
+          </div>
+          <div class="infos">
+
+            <div class="country">
+
+              Angleterre
+            </div>
+
+            <div class="item">
+              <div class="icon"> <span class="fa fa-phone"> </sapn>
+              </div>
+              <div class="">
+                <div class="name">Mme Marie-José Manpuya</div>
+                <div class="number"> + 44207 254 6750 </div>
+
+              </div>
+
+            </div>
+
+          </div>
+          <div class="infos">
+
+            <div class="country">
+
+              Belgique
+            </div>
+
+            <div class="item">
+              <div class="icon"> <span class="fa fa-phone"> </span></div>
+              <div>
+                <div class="name">Mme Chantal Basoka</div>
+                <div class="number"> + 32478976274</div>
+              </div>
+
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+
+
+    </div>
+
+
+
+    <section id="gallery" class="gallery">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>Gallerie</h2>
+          <p></p>
+        </div>
+      </div>
+
+      <div class="container-fluid">
+        <div class="row g-0">
+
+          <div class="col-lg-3 col-md-4">
+            <div class="gallery-item">
+              <a href="assets/img/gallery/gallery-1.jpg" class="galelry-lightbox">
+                <img src="assets/img/gallery/gallery.jpg" alt="" class="img-fluid">
+              </a>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-4">
+            <div class="gallery-item">
+              <a href="assets/img/gallery/gallery.jpg" class="galelry-lightbox">
+                <img src="assets/img/gallery/gallery2.jpg" alt="" class="img-fluid">
+              </a>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-4">
+            <div class="gallery-item">
+              <a href="assets/img/gallery/gallery3.jpg" class="galelry-lightbox">
+                <img src="assets/img/gallery/gallery3.jpg" alt="" class="img-fluid">
+              </a>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-4">
+            <div class="gallery-item">
+              <a href="assets/img/gallery/gallery4.jpg" class="galelry-lightbox">
+                <img src="assets/img/gallery/gallery4.jpg" alt="" class="img-fluid">
+              </a>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-4">
+            <div class="gallery-item">
+              <a href="assets/img/gallery/gallery5.jpg" class="galelry-lightbox">
+                <img src="assets/img/gallery/gallery5.jpg" alt="" class="img-fluid">
+              </a>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-4">
+            <div class="gallery-item">
+              <a href="assets/img/gallery/gallery6.jpg" class="galelry-lightbox">
+                <img src="assets/img/gallery/gallery6.jpg" alt="" class="img-fluid">
+              </a>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-4">
+            <div class="gallery-item">
+              <a href="assets/img/gallery/gallery-7.jpg" class="galelry-lightbox">
+                <img src="assets/img/gallery/gallery7.jpg" alt="" class="img-fluid">
+              </a>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-4">
+            <div class="gallery-item">
+              <a href="assets/img/gallery/gallery8.jpg" class="galelry-lightbox">
+                <img src="assets/img/gallery/gallery8.jpg" alt="" class="img-fluid">
+              </a>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Gallery Section -->
+
+
+    <!-- ======= Footer ======= -->
+    <footer id="footer">
+
+      <div class="footer-top">
+        <div class="container">
+          <div class="row">
+
+            <div class="col-lg-3 col-md-6 footer-contact">
+              <h3>Clinique Promedis</h3>
+              <p>
+                N 23/C Industriel <br>
+                10 ème Rue Limete Industriel<br>
+                <br><br>
+                <strong>Phone:</strong> + 2433385771<br>
+                <strong>Email:</strong> cliniquepromedis@gmail.com<br>
+                <strong>Plein temps:</strong> 24h/24<br>
+              </p>
+            </div>
+
+            <div class="col-lg-2 col-md-6 footer-links">
+              <h4>A propos</h4>
+              <ul>
+                <li> <a href="#">Historique</a></li>
+                <li><a href="#">Nous connaitre</a></li>
+
+              </ul>
+            </div>
+
+            <div class="col-lg-3 col-md-6 footer-links">
+              <h4>Nos Services</h4>
+              <ul>
+                <li> <a href="#">CPN-CPS</a></li>
+                <li> <a href="#">Dentisterie</a></li>
+                <li> <a href="#">Irologie</a></li>
+                <li><a href="#">Ophtalmologie</a></li>
+                <li><a href="#">Pédiatrie</a></li>
+                <li> <a href="#">Irologie</a></li>
+                <li><a href="#">Gynécologie</a></li>
+                <li><a href="#">Pédiatrie</a></li>
+              </ul>
+            </div>
+
+            <div class="col-lg-4 col-md-6 footer-newsletter">
+              <h4>Inscrivez-vous à notre newsletter</h4>
+              <p>Restez à jour avec les dernières avancées médicales, les conseils de santé et les événements
+                communautaires en vous abonnant à notre newsletter.</p>
+              <form action="" method="post">
+                <input type="email" name="email"><input type="submit" value="Subscribe">
+              </form>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <div class="container d-md-flex py-4">
+
+        <div class="me-md-auto text-center text-md-start">
+          <div class="copyright">
+            &copy; Copyright <strong><span>Promedis</span></strong>. Tous droit reservé
+          </div>
+          <div class="credits">
+            <!-- All the links in the footer should remain intact. -->
+            <!-- You can delete the links only if you purchased the pro version. -->
+            <!-- Licensing information: https://bootstrapmade.com/license/ -->
+            <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/medilab-free-medical-bootstrap-theme/ -->
+            Concus <a href="https://bootstrapmade.com/">Clinique Promedis</a>
+          </div>
+        </div>
+        <div class="social-links text-center text-md-right pt-3 pt-md-0">
+          <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
+          <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
+          <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
+          <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
+          <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+        </div>
+      </div>
+    </footer><!-- End Footer -->
+
+
+
+
+    <div id="preloader"></div>
+    <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
+        class="bi bi-arrow-up-short"></i></a>
+    <!-- Vendor JS Files -->
+    <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+    <script src="assets/vendor/php-email-form/validate.js"></script>
+
+    <!-- Template Main JS File -->
+    <script src="assets/js/main.js"></script>
+
+    <script> 
+      const currentURL = window.location.href;  console.log(`L'URL actuelle est : ${currentURL}`);
+  
+      console.log(currentURL)
+  
+       // Sélectionner tous les liens de navigation
+       const navLinks = document.querySelectorAll('.navbar .nav-linkPage');
+  
+       console.log(navLinks)
+  
+  // Parcourir les liens de navigation
+  navLinks.forEach(link => {
+    // Vérifier si le lien correspond à l'URL actuelle
+    if (currentURL.includes(link.getAttribute('href'))) {
+      // Ajouter la classe 'active' au lien correspondant
+      link.classList.add('active');
+    } else {
+      // Supprimer la classe 'active' des autres liens
+      link.classList.remove('active');
+    }
+  });
+  </script>
+</body>
+
+</html>

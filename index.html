@@ -1,0 +1,1080 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title> Clinique Promedis</title>
+
+  <style>
+    .navbar .nav-linkPage.active {
+      color: #5FA599;
+      border-color: #5FA599;
+    }
+  </style>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link
+    href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+    rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
+  <link href="assets/vendor/animate.css/animate.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+
+ 
+  <link href="assets/css/style.css" rel="stylesheet">
+
+  <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+</script>
+
+
+<script type="text/javascript">
+  (function(){
+     emailjs.init({
+       publicKey: "UZF1ohsXpSwqR_Nyk",
+     });
+  })();
+
+</script>
+<script src="script1.js"></script>
+<script src="script.js"></script>
+</head>
+
+<body>
+
+  <!-- ======= Top Bar ======= -->
+  <div id="topbar" class="d-flex align-items-center fixed-top">
+    <div class="container d-flex justify-content-between">
+      <div class="contact-info d-flex align-items-center">
+        <i class="bi bi-envelope"></i> <a href="mailto:contact@example.com">cliniquepromedis@gmail.com</a>
+        <i class="bi bi-phone"></i> + 24389980029
+      </div>
+      <div class="d-none d-lg-flex social-links align-items-center">
+        <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
+        <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
+        <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
+        <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></i></a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top">
+    <div class="container d-flex align-items-center">
+
+
+      <!-- Uncomment below if you prefer to use an image logo -->
+      <a href="index.html" class="logo me-auto"><img src="assets/img/logo.jpeg" alt="" class="img-fluid"></a>
+
+      <nav id="navbar" class="navbar order-last order-lg-0">
+        <ul>
+          <li><a class="nav-link scrollto active" href="/">Accueil</a></li>
+          <li><a class="nav-linkPage scrollto" href="./about.html">A propos</a></li>
+          <li><a class="nav-linkPage scrollto" href="./succursales.html">Succursales</a></li>
+          <li><a class="nav-link scrollto" href="#departments">Departements</a> </i></li>
+          <li><a class="nav-link scrollto" href="#doctors">Medecins</a></li>
+          <li class="dropdown"><a href="#services"><span>Services</span> <i class="bi bi-chevron-down"></i></a>
+
+            <ul>
+              <li>
+                <a href="./generalConsultaion.html">Consultation Generale  24/24</a>
+              </li>
+              <li>
+                <a href="/consultationSpecialise.html">Consultations spécialisés </a>
+              </li>
+              <li>
+              <a href="/pediatrie">
+              Pédiatrie 
+              </a>
+              </li>
+              
+              <li>
+              <a href="/gynecologie">
+                Gynecologie
+              </a>
+              </li>
+            
+              <li>
+                <a href="/internalMedecine">Médecine Interne  </a>
+              </li>
+              <li>
+                <a href="/ophtamologie">Ophtamologie </a>
+              </li>
+              <li>
+                <a href="/dermatologie">Dérmatologie </a>
+              </li>
+              <li>
+                <a href="/orthopedie">Orthopédie </a>
+              </li>
+              <li>
+                <a href="#">Neuropychiatrie </a>
+              </li>
+              <li>
+                <a href="#">ORL </a>
+              </li>
+              <li>
+                <a href="#">Dentisterie </a>
+              </li>
+              <li>
+                <a href="#">Urologie </a>
+              </li>
+              <li>
+                <a href="#">Cardiologie </a>
+              </li>
+              <li>
+                <a href="#">CPN CPS </a>
+              </li>
+            </ul>
+          </li>
+          <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+     
+      </nav><!-- .navbar -->
+
+      <div class="btn-contact">
+
+      <a href="#appointment" class="appointment-btn scrollto"><span class="d-none d-md-inline"></span> Prenez un
+        rendez-vous
+
+        
+      </a>
+      <div class="iconWhatsapp" onclick="whatsappRedirect()"> <i class='fab fa-whatsapp-square'></i>
+      </div>
+    </div>
+   
+
+    </div>
+  </header><!-- End Header -->
+
+  <!-- ======= Hero Section ======= -->
+  <section id="hero" class="d-flex align-items-center">
+    <div class="container">
+      <h1>Bienvenue à la Clinique Promedis </h1>
+      <h2>Exercer la médecine avec toutes les exigences de l'art de guérir: C'est notre vocation.</h2>
+      <a href="#about" class="btn-get-started scrollto">A propos de nous</a>
+    </div>
+  </section><!-- End Hero -->
+  <main id="main">
+    <!-- ======= Why Us Section ======= -->
+    <section id="why-us" class="why-us">
+      <div class="container">
+
+        <div class="row">
+          <div class="col-lg-4 d-flex align-items-stretch">
+            <div class="content">
+              <h3>Pourquoi nous faire confiance?</h3>
+              <p>
+                Les reponse sont juste à ta droite
+              </p>
+              <div class="text-center">
+                <a href="#" class="more-btn">Learn More <i class="bx bx-chevron-right"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-8 d-flex align-items-stretch">
+            <div class="icon-boxes d-flex flex-column justify-content-center">
+              <div class="row">
+                <div class="col-xl-4 d-flex align-items-stretch">
+                  <div class="icon-box mt-4 mt-xl-0">
+                    <i class="bx bx-receipt"></i>
+                    <h4>Ouvert 24/24</h4>
+                    <p>La Clinique Promedis est ouvert 24 heures sur 24, 7 jours sur 7 pour vous accueillir à tout
+                      moment.</p>
+                  </div>
+                </div>
+                <div class="col-xl-4 d-flex align-items-stretch">
+                  <div class="icon-box mt-4 mt-xl-0">
+                    <i class="bx bx-cube-alt"></i>
+                    <h4>Experience</h4>
+                    <p>Avec plus de 20 ans d'expérience, la Clinique Promedis met tout en œuvre pour vous offrir une
+                      expérience de soin exceptionnelle</p>
+                  </div>
+                </div>
+                <div class="col-xl-4 d-flex align-items-stretch">
+                  <div class="icon-box mt-4 mt-xl-0">
+                    <i class="bx bx-images"></i>
+                    <h4>Présence à Proximité</h4>
+                    <p>Des soins de santé de qualité, partout autour de vous. Avec ses 7 different centres </p>
+                  </div>
+                </div>
+              </div>
+            </div><!-- End .content-->
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End Why Us Section -->
+
+    <!-- ======= About Section ======= -->
+    <section id="about" class="about">
+      <div class="container-fluid">
+
+        <div class="row">
+          <div class="col-xl-5 col-lg-6 video-box d-flex justify-content-center align-items-stretch position-relative">
+            <a href="https://www.youtube.com/watch?v=tKNKh02XhL0" class="glightbox play-btn mb-4"></a>
+          </div>
+
+          <div
+            class="col-xl-7 col-lg-6 icon-boxes d-flex flex-column align-items-stretch justify-content-center py-5 px-lg-5">
+            <h3>A Propos de nous</h3>
+            <p>La Clinique Promedis est un grand hôpital situé sur la 10e Rue, Quartier Industriel dans la Commune de
+              Limete. Ayant 6 succursales. Elle est l'initiative de son Administrateur Médecin Directeur, Docteur
+              Nicolas NDUKUTE NGANSER et a été recrutée le 1er mai 1995.</p>
+
+            <div class="icon-box">
+              <div class="icon"><i class="bx bx-fingerprint"></i></div>
+              <h4 class="title"><a href="">Expert metier</a></h4>
+              <p class="description">20 Médecins Généralistes, 15 Médecins Spécialistes.
+                 102 Infirmières et Infirmiers qualifiés.
+              </p>
+            </div>
+
+            <div class="icon-box">
+              <div class="icon"><i class="bx bx-gift"></i></div>
+              <h4 class="title"><a href="">Recompense</a></h4>
+              <p class="description">L'hopital Promedis dispose de plusieurs recompense
+            </div>
+
+            <div class="icon-box">
+              <a href="#plus" class="plus-btn scrollto"><span class="d-none d-md-inline"></span> 
+                A savoir plus  
+                <i class="fa fa-arrow-right" aria-hidden="true"></i>      
+                
+              </a>
+            </div>
+
+
+
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End About Section -->
+
+    <!-- ======= Counts Section ======= -->
+    <section id="counts" class="counts">
+      <div class="container">
+
+        <div class="row">
+
+          <div class="col-lg-3 col-md-6">
+            <div class="count-box">
+              <i class="fas fa-user-md"></i>
+              <span data-purecounter-start="0" data-purecounter-end="35" data-purecounter-duration="1"
+                class="purecounter"></span>
+              <p>Medecins</p>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 mt-5 mt-md-0">
+            <div class="count-box">
+              <i class="far fa-hospital"></i>
+              <span data-purecounter-start="0" data-purecounter-end="20" data-purecounter-duration="1"
+                class="purecounter"></span>
+              <p>Expérience</p>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 mt-5 mt-lg-0">
+            <div class="count-box">
+              <i class="fas fa-flask"></i>
+              <span data-purecounter-start="0" data-purecounter-end="7" data-purecounter-duration="1"
+                class="purecounter"></span>
+              <p>Laboratoire de recherche</p>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 mt-5 mt-lg-0">
+            <div class="count-box">
+              <i class="fas fa-award"></i>
+              <span data-purecounter-start="0" data-purecounter-end="16" data-purecounter-duration="1"
+                class="purecounter"></span>
+              <p>Infirmier et Infirmière </p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Counts Section -->
+
+    <!-- ======= Services Section ======= -->
+    <section id="services" class="services">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>Services</h2>
+          <p>Votre santé est notre priorité absolue. La Clinique Promedis, nous mettons à votre disposition une équipe
+            de professionnels de santé passionnés, des équipements de pointe et une prise en charge global pour vous
+            offrir les meilleurs soins.</p>
+        </div>
+
+        <div class="row">
+
+
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
+            <div class="icon-box">
+              <div class="icon"><i class="fas fa-heartbeat"></i></div>
+              <h4><a href="./generalConsultaion.html">Consultation Générale</a></h4>
+              <p>Nos consultations médicales générales vous offrent un accès rapide et facile à des soins de santé de qualité. Notre équipe de médecins généralistes expérimentés se tient à votre disposition pour répondre à l'ensemble de vos besoins de santé, du suivi régulier aux examens ponctuels</p>
+            </div>
+          </div>
+
+
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
+            <div class="icon-box">
+              <div class="icon"><i class="fas fa-heartbeat"></i></div>
+              <h4><a href="">Consultation Spécialisé</a></h4>
+              <p> Au sein de notre établissement, nos consultations spécialisées vous assurent un accompagnement médical de pointe. Notre équipe pluridisciplinaire d'experts qualifiés se tient à votre écoute pour répondre avec précision à vos besoins de santé les plus pointus. Que ce soit pour un suivi régulier ou un examen ponctuel,</p>
+            </div>
+          </div>
+
+          
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
+            <div class="icon-box">
+              <div class="icon"><i class="fas fa-heartbeat"></i></div>
+              <h4><a href="">Neuropychiatre</a></h4>
+              <p>Votre bien-être mental et neurologique est au cœur de nos préoccupations au sein de notre service neuropsychiatrique d'excellence</p>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
+            <div class="icon-box">
+              <div class="icon"><i class="fas fa-heartbeat"></i></div>
+              <h4><a href="">Dentisterie</a></h4>
+              <p>Votre santé bucco-dentaire est notre priorité absolue. Notre équipe de dentistes hautement qualifiés met toute son expertise et son savoir-faire au service de vos besoins en matière de soins dentaires, du détartrage de routine aux traitements les plus complexes.</p>
+            </div>
+          </div>
+
+          
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
+            <div class="icon-box">
+              <div class="icon"><i class="fas fa-heartbeat"></i></div>
+              <h4><a href="">CPN-CPS</a></h4>
+              <p>Tout au long de votre parcours de future ou jeune maman, notre Centre Périnatal de Proximité vous accompagne avec la plus grande attention. Que ce soit pour un suivi prénatal régulier, des séances de préparation à l'accouchement ou un soutien en post-natal , notre équipe pluridisciplinaire de sages-femmes, puéricultrices et consultantes spécialisées avec toute son expertise et sa bienveillance à votre service, dans un environnement chaleureux et sécurisant</p>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
+            <div class="icon-box">
+              <div class="icon"><i class="fas fa-heartbeat"></i></div>
+              <h4><a href="">Urologie</a></h4>
+              <p>Nos urologues, spécialistes reconnus des troubles et maladies de l'appareil urinaire, mettent toute leur expertise au service de votre prise en charge.</p>
+            </div>
+          </div>
+
+
+
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+            <div class="icon-box">
+              <div class="icon"><i class="fas fa-heartbeat"></i></div>
+              <h4><a href="">Orthopedie</a></h4>
+              <p>Notre service d'orthopédie de pointe offre des soins de haute qualité pour le diagnostic, le traitement et la rééducation des blessures et des maladies affectant les os, les articulations, les ligaments et les tendons.</p>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
+            <div class="icon-box">
+              <div class="icon"><i class="fas fa-heartbeat"></i></div>
+              <h4><a href="">Cardiologie</a></h4>
+              <p>Grâce à notre expertise médicale de pointe, nous avons réussi à traiter avec succès le problème
+                cardiaque de nos patients, en leurs offrant ainsi une nouvelle chance de vie et une amélioration
+                significative de leur santé</p>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 ">
+            <div class="icon-box">
+              <div class="icon"><i class="fas fa-pills"></i></div>
+              <h4><a href="">Pharmacie</a></h4>
+              <p>Nous sommes dévoués à fournir des soins de qualité et des traitements efficaces, y compris des pilules,
+                pour le bien-être de nos patients.</p>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-lg-0">
+            <div class="icon-box">
+              <div class="icon"><i class="fas fa-hospital-user"></i></div>
+              <h4><a href="">Pédiatrie</a></h4>
+              <p>Notre service de pédiatrie dédié offre des soins attentionnés et spécilisés aux enfants, garantissant
+                leur bien etre et leur santé. </p>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
+            <div class="icon-box">
+              <div class="icon"><i class="fa fa-female" aria-hidden="true"></i></div>
+              <h4><a href="">Gynecologie</a></h4>
+              <p>Notre hôpital est reconnu pour sa prise en charge puissante et
+                complète en matière de gynécologie. Avec une équipe médicale
+                hautement qualifiée, des technologies de pointe et une
+                approche centrée sur la patiente, nous offrons des services
+                gynécologiques de premier ordre.</p>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
+            <div class="icon-box">
+              <div class="icon"><i class="bi bi-person-fill"></i></div>
+              <h4><a href="">Dermathologie</a></h4>
+              <p>Le service de dermatologie de l'Hôpital Promedis est reconnu pour son excellence dans la prise en
+                charge globale des affections cutanées, des plus bénignes aux plus complexes. Dirigé par une équipe de
+                dermatologues chevronnés, ce département de pointe offre une gamme complète de services dermatologiques
+                de premier ordre.</p>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
+            <div class="icon-box">
+              <div class="icon"><i class="bi bi-eye"></i></div>
+              <h4><a href="">Ophtamologie</a></h4>
+              <p>Choisissez notre hôpital pour votre traitement ophtalmologique et faites l'expérience d'un niveau
+                exceptionnel de soins oculaires. Notre équipe de spécialistes dévoués, combinée à des installations de
+                pointe, garantit des diagnostics précis, des traitements avancés et des résultats optimaux</p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Services Section -->
+
+    <!-- ======= Appointment Section ======= -->
+    <section id="appointment" class="appointment section-bg">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>Prendre rendez-vous</h2>
+          <p>Pour prendre rendez-vous, veuillez utiliser notre formulaire en ligne dédié à cet effet.</p>
+        </div>
+
+        <form action="forms/appointment.php" method="post" role="form" class="php-email-form">
+          <div class="row">
+            <div class="col-md-4 form-group">
+              <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" data-rule="minlen:4"
+                data-msg="Please enter at least 4 chars">
+              <div class="validate"></div>
+            </div>
+            <div class="col-md-4 form-group mt-3 mt-md-0">
+              <input type="email" class="form-control" name="email" id="email" placeholder="Your Email"
+                data-rule="email" data-msg="Please enter a valid email">
+              <div class="validate"></div>
+            </div>
+            <div class="col-md-4 form-group mt-3 mt-md-0">
+              <input type="tel" class="form-control" name="phone" id="phone" placeholder="Your Phone"
+                data-rule="minlen:4" data-msg="Please enter at least 4 chars">
+              <div class="validate"></div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-4 form-group mt-3">
+              <input type="date" name="date" class="form-control datepicker" id="date" placeholder="Appointment Date"
+                data-rule="minlen:4" data-msg="Please enter at least 4 chars">
+              <div class="validate"></div>
+            </div>
+            <div class="col-md-4 form-group mt-3">
+              <select name="department" id="service" class="form-select">
+                <option value="">Select Department</option>
+                <option value="Department 1">Department 1</option>
+                <option value="Department 2">Department 2</option>
+                <option value="Department 3">Department 3</option>
+              </select>
+              <div class="validate"></div>
+            </div>
+            <div class="col-md-4 form-group mt-3">
+              <select name="doctor" id="doctor" class="form-select">
+                <option value="">Select Doctor</option>
+                <option value="Doctor 1">Doctor 1</option>
+                <option value="Doctor 2">Doctor 2</option>
+                <option value="Doctor 3">Doctor 3</option>
+              </select>
+              <div class="validate"></div>
+            </div>
+          </div>
+
+          <div class="form-group mt-3">
+            <textarea class="form-control" name="message" rows="5"  id='message' placeholder="Message (Optional)"></textarea>
+          
+          </div>
+         
+          <div class="text-center" onclick="sendEmail()"><button type="submit">Prendre rendez-vous</button></div>
+        </form>
+
+      </div>
+    </section><!-- End Appointment Section -->
+
+    <!-- ======= Departments Section ======= -->
+    <section id="departments" class="departments">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>Departments</h2>
+          <p>"La Clinique Promedis dispose d'une équipe médicale pluridisciplinaire couvrant l'ensemble des spécialités clés, avec ses differents départements d'excellence Nos différents services collaborent étroitement pour vous offrir des soins de santé complets et sur-mesure."</p>
+        </div>
+        <div class="row gy-4">
+          <div class="col-lg-3">
+            <ul class="nav nav-tabs flex-column">
+              <li class="nav-item">
+                <a class="nav-link active show" data-bs-toggle="tab" href="#tab-1">Cardiologie</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" data-bs-toggle="tab" href="#tab-2">Neurologie</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" data-bs-toggle="tab" href="#tab-3">Hepatologie</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" data-bs-toggle="tab" href="#tab-4">Pediatrie</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" data-bs-toggle="tab" href="#tab-5">Ophtamologie</a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-lg-9">
+            <div class="tab-content">
+              <div class="tab-pane active show" id="tab-1">
+                <div class="row gy-4">
+                  <div class="col-lg-8 details order-2 order-lg-1">
+                    <h3>Cardiologie</h3>
+                    <p class="fst-italic">La cardiologie est la branche de la médecine qui se spécialise dans l'étude, le diagnostic et le traitement des maladies du cœur et du système cardiovasculaire.</p>
+                    <p>Notre hôpital est reconnu pour sa prise en charge puissante et complète en matière de gynécologie. Avec une équipe médicale hautement qualifiée, des technologies de pointe et une approche centrée sur la patiente, nous offrons des services gynécologiques de premier ordre.</p>
+                  </div>
+                  <div class="col-lg-4 text-center order-1 order-lg-2">
+                    <img src="assets/img/departments-1.jpg" alt="" class="img-fluid">
+                  </div>
+                </div>
+              </div>
+              <div class="tab-pane" id="tab-2">
+                <div class="row gy-4">
+                  <div class="col-lg-8 details order-2 order-lg-1">
+                    <h3>Neurologie</h3>
+                    <p class="fst-italic">La neurologie est la branche de la médecine qui se consacre à l'étude, au diagnostic et au traitement des maladies et troubles du système nerveux, c'est-à-dire le cerveau, la moelle épinière et les nerfs.</p>
+                    <p>Le service de neurologie de l'Hôpital Promedis est reconnu pour son excellence dans la prise en charge globale des affections du système nerveux, des plus bénignes aux plus complexes. Dirigé par une équipe de neurologues chevronnés, ce département de pointe offre une gamme complète de services neurologiques de premier ordre.</p>
+                  </div>
+                  <div class="col-lg-4 text-center order-1 order-lg-2">
+                    <img src="assets/img/departments-2.jpg" alt="" class="img-fluid">
+                  </div>
+                </div>
+              </div>
+              <div class="tab-pane" id="tab-3">
+                <div class="row gy-4">
+                  <div class="col-lg-8 details order-2 order-lg-1">
+                    <h3>Hepathologie</h3>
+                    <p class="fst-italic">L'hépatologie est la branche de la médecine qui se concentre sur l'étude, le diagnostic et le traitement des maladies du foie, de la vésicule biliaire et des voies biliaires.</p>
+                    
+                  </div>
+                  <div class="col-lg-4 text-center order-1 order-lg-2">
+                    <img src="assets/img/departments-3.jpg" alt="" class="img-fluid">
+                  </div>
+                </div>
+              </div>
+              <div class="tab-pane" id="tab-4">
+                <div class="row gy-4">
+                  <div class="col-lg-8 details order-2 order-lg-1">
+                    <h3>Pédiatrie</h3>
+                    <p class="fst-italic">Notre service de pédiatrie se distingue par son approche bienveillante et centrée sur le bien-être de l'enfant.</p>
+                    <p> Dirigé par une équipe de pédiatres hautement qualifiés, notre département propose des soins de santé complets, du suivi de la croissance et du développement aux prises en charge spécialisées pour les pathologies infantiles les plus complexes.</p>
+                  </div>
+                  <div class="col-lg-4 text-center order-1 order-lg-2">
+                    <img src="assets/img/departments-4.jpg" alt="" class="img-fluid">
+                  </div>
+                </div>
+              </div>
+              <div class="tab-pane" id="tab-5">
+                <div class="row gy-4">
+                  <div class="col-lg-8 details order-2 order-lg-1">
+                    <h3>Ophtamologie</h3>
+                
+                    <p>Nos experts en ophtalmologie combinent les dernières innovations médicales et une expertise clinique approfondie pour prendre en charge l'ensemble des pathologies oculaires, du traitement des troubles de la vision à la prise en charge chirurgicale des affections ophtalmiques les plus complexes</p>
+                  </div>
+                  <div class="col-lg-4 text-center order-1 order-lg-2">
+                    <img src="assets/img/departments-5.jpg" alt="" class="img-fluid">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End Departments Section -->
+
+    <!-- ======= Doctors Section ======= -->
+    <section id="doctors" class="doctors">
+      <div class="container">
+
+        <div class="section-title">
+          <h2> Rencontrez nos médecins</h2>
+       
+        </div>
+
+        <div class="row">
+
+          <div class="col-lg-6">
+            <div class="member d-flex align-items-start">
+              <div class="pic"><img src="assets/img/doctors/about.jpeg" class="img-fluid" alt=""></div>
+              <div class="member-info">
+                <h4>Walter White</h4>
+                <span>Chief Medical Officer</span>
+                <p>Explicabo voluptatem mollitia et repellat qui dolorum quasi</p>
+                <div class="social">
+                  <a href=""><i class="ri-twitter-fill"></i></a>
+                  <a href=""><i class="ri-facebook-fill"></i></a>
+                  <a href=""><i class="ri-instagram-fill"></i></a>
+                  <a href=""> <i class="ri-linkedin-box-fill"></i> </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6 mt-4 mt-lg-0">
+            <div class="member d-flex align-items-start">
+              <div class="pic"><img src="assets/img/doctors/about.jpeg" class="img-fluid" alt=""></div>
+              <div class="member-info">
+                <h4>Sarah Jhonson</h4>
+                <span>Anesthesiologist</span>
+                <p>Aut maiores voluptates amet et quis praesentium qui senda para</p>
+                <div class="social">
+                  <a href=""><i class="ri-twitter-fill"></i></a>
+                  <a href=""><i class="ri-facebook-fill"></i></a>
+                  <a href=""><i class="ri-instagram-fill"></i></a>
+                  <a href=""> <i class="ri-linkedin-box-fill"></i> </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6 mt-4">
+            <div class="member d-flex align-items-start">
+              <div class="pic"><img src="assets/img/doctors/about.jpeg" class="img-fluid" alt=""></div>
+              <div class="member-info">
+                <h4>William Anderson</h4>
+                <span>Cardiology</span>
+                <p>Quisquam facilis cum velit laborum corrupti fuga rerum quia</p>
+                <div class="social">
+                  <a href=""><i class="ri-twitter-fill"></i></a>
+                  <a href=""><i class="ri-facebook-fill"></i></a>
+                  <a href=""><i class="ri-instagram-fill"></i></a>
+                  <a href=""> <i class="ri-linkedin-box-fill"></i> </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6 mt-4">
+            <div class="member d-flex align-items-start">
+              <div class="pic"><img src="assets/img/doctors/about.jpeg" class="img-fluid" alt=""></div>
+              <div class="member-info">
+                <h4>Amanda Jepson</h4>
+                <span>Neurosurgeon</span>
+                <p>Dolorum tempora officiis odit laborum officiis et et accusamus</p>
+                <div class="social">
+                  <a href=""><i class="ri-twitter-fill"></i></a>
+                  <a href=""><i class="ri-facebook-fill"></i></a>
+                  <a href=""><i class="ri-instagram-fill"></i></a>
+                  <a href=""> <i class="ri-linkedin-box-fill"></i> </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Doctors Section -->
+
+    <!-- ======= Frequently Asked Questions Section ======= -->
+ 
+
+    <!-- ======= Testimonials Section ======= -->
+    <section id="testimonials" class="testimonials">
+      <div class="container">
+
+        <div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="100">
+          <div class="swiper-wrapper">
+
+            <div class="swiper-slide">
+              <div class="testimonial-wrap">
+                <div class="testimonial-item">
+                  <img src="assets/img/testimonials/temoin1.png" class="testimonial-img" alt="">
+                  <h3>
+                    Marie-pascale Baere</h3>
+                  <h4>Patiente</h4>
+                  <p>
+                    <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                    La clinique Promedis propose un service de qualité, la prise en charge des malades est très rapide
+                    et les prix mettent à l’aise toute la population ( de mon expérience). Le bon côté est aussi le fait
+                    que ses portes sont ouvertes dans presque toutes les communes de la ville de Kinshasa. Vous pouvez
+                    vous faire soigner peu importe où vous serez à Kinshasa.
+                    <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                  </p>
+                </div>
+              </div>
+            </div><!-- End testimonial item -->
+
+            <div class="swiper-slide">
+              <div class="testimonial-wrap">
+                <div class="testimonial-item">
+                  <img src="assets/img/testimonials/temoin2.png" class="testimonial-img" alt="">
+                  <h3>Candyce Ilunga</h3>
+                  <h4>Patiente</h4>
+                  <p>
+                    <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                    Pour avoir eu plusieurs fois des expériences avec la clinique Promedis, je peux dire que le service
+                    est impeccable. La prise en charge des malades est faite avec beaucoup de soin. De plus ils ont des
+                    centres un peu partout dans la ville. Mes proches dispersés dans les 4 coins de la ville ne se font
+                    soigner que là!!
+                    <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                  </p>
+                </div>
+              </div>
+            </div><!-- End testimonial item -->
+
+            <div class="swiper-slide">
+              <div class="testimonial-wrap">
+                <div class="testimonial-item">
+                  <img src="assets/img/testimonials/temoin3.png" class="testimonial-img" alt="">
+                  <h3>Keren_ M</h3>
+                  <h4>Patiente</h4>
+                  <p>
+                    <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                    Des infirmiers et infirmières gentils et courtois
+                    Des médecins à l’écoute des patients
+                    Une prise en charge rapide et très consciencieuse
+                    Un hôpital impeccable !
+                    Et surtout à un prix accessible à tous
+                    On en voit pas beaucoup à Kinshasa !
+                    Je vous conseille Fortement PROMEDI
+                    <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                  </p>
+                </div>
+              </div>
+            </div><!-- End testimonial item -->
+
+           
+
+          
+            <div class="swiper-slide">
+              <div class="testimonial-wrap">
+                <div class="testimonial-item">
+                  <img src="assets/img/testimonials/temoin6.png" class="testimonial-img" alt="">
+                  <h3>Grace Kankolongo</h3>
+                  <h4>Patiente</h4>
+                  <p>
+                    <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                    L’accessibilité aux soins de santé est une priorité, la clinique Promedis y marque des points  👏🏽
+                    L’accessibilité compte aussi pour les différents centres Promedis répandus à travers la ville. 👌🏽
+                    <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                  </p>
+                </div>
+              </div>
+            </div><!-- End testimonial item -->
+
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+
+      </div>
+    </section><!-- End Testimonials Section -->
+
+    <!-- ======= Gallery Section ======= -->
+    <section id="gallery" class="gallery">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>Gallerie</h2>
+          <p></p>
+        </div>
+      </div>
+
+      <div class="container-fluid">
+        <div class="row g-0">
+
+          <div class="col-lg-3 col-md-4">
+            <div class="gallery-item">
+              <a href="assets/img/gallery/gallery-1.jpg" class="galelry-lightbox">
+                <img src="assets/img/gallery/gallery.jpg" alt="" class="img-fluid">
+              </a>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-4">
+            <div class="gallery-item">
+              <a href="assets/img/gallery/gallery.jpg" class="galelry-lightbox">
+                <img src="assets/img/gallery/gallery2.jpg" alt="" class="img-fluid">
+              </a>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-4">
+            <div class="gallery-item">
+              <a href="assets/img/gallery/gallery3.jpg" class="galelry-lightbox">
+                <img src="assets/img/gallery/gallery3.jpg" alt="" class="img-fluid">
+              </a>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-4">
+            <div class="gallery-item">
+              <a href="assets/img/gallery/gallery4.jpg" class="galelry-lightbox">
+                <img src="assets/img/gallery/gallery4.jpg" alt="" class="img-fluid">
+              </a>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-4">
+            <div class="gallery-item">
+              <a href="assets/img/gallery/gallery5.jpg" class="galelry-lightbox">
+                <img src="assets/img/gallery/gallery5.jpg" alt="" class="img-fluid">
+              </a>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-4">
+            <div class="gallery-item">
+              <a href="assets/img/gallery/gallery6.jpg" class="galelry-lightbox">
+                <img src="assets/img/gallery/gallery6.jpg" alt="" class="img-fluid">
+              </a>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-4">
+            <div class="gallery-item">
+              <a href="assets/img/gallery/gallery-7.jpg" class="galelry-lightbox">
+                <img src="assets/img/gallery/gallery7.jpg" alt="" class="img-fluid">
+              </a>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-4">
+            <div class="gallery-item">
+              <a href="assets/img/gallery/gallery8.jpg" class="galelry-lightbox">
+                <img src="assets/img/gallery/gallery8.jpg" alt="" class="img-fluid">
+              </a>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Gallery Section -->
+
+    <!-- ======= Contact Section ======= -->
+    <section id="contact" class="contact">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>Contact</h2>
+          <p>Utilisez le formulaire ci-dessous pour toute demande de rendez-vous ou pour nous contacter. Nous vous
+            répondrons dans les plus brefs délais</p>
+        </div>
+      </div>
+
+      <div>
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3978.305365787942!2d15.339067874072517!3d-4.353704546670824!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1a6a36e68f7ee96f%3A0xc2f7145f16052950!2sClinique%20Promedis!5e0!3m2!1sfr!2scd!4v1721133299168!5m2!1sfr!2scd"
+          width="100%" height="650" style="border:0;" allowfullscreen="" loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+
+      <div class="container">
+        <div class="row mt-5">
+
+          <div class="col-lg-4">
+            <div class="info">
+              <div class="address">
+                <i class="bi bi-geo-alt"></i>
+                <h4>Adresse:</h4>
+                <p>N 23/C 10 ème Rue Limete Industriel</p>
+              </div>
+
+              <div class="email">
+                <i class="bi bi-envelope"></i>
+                <h4>Email:</h4>
+                <p>cliniquepromedis@gmail.com</p>
+              </div>
+
+              <div class="phone">
+                <i class="bi bi-phone"></i>
+                <h4>Téléphone:</h4>
+                <p>+ 2433385771</p>
+              </div>
+
+            </div>
+
+          </div>
+
+          <div class="col-lg-8 mt-5 mt-lg-0">
+
+            <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+              <div class="row">
+                <div class="col-md-6 form-group">
+                  <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
+                </div>
+                <div class="col-md-6 form-group mt-3 mt-md-0">
+                  <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>
+                </div>
+              </div>
+              <div class="form-group mt-3">
+                <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required>
+              </div>
+              <div class="form-group mt-3">
+                <textarea class="form-control" name="message" rows="5" placeholder="Message" required></textarea>
+              </div>
+              <div class="my-3">
+                <div class="loading">Loading</div>
+                <div class="error-message"></div>
+                <div class="sent-message">Your message has been sent. Thank you!</div>
+              </div>
+              <div class="text-center"><button type="submit">Send Message</button></div>
+            </form>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Contact Section -->
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+
+    <div class="footer-top">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-lg-3 col-md-6 footer-contact">
+            <h3>Clinique Promedis</h3>
+            <p>
+              N 23/C  Industriel <br>
+              10 ème Rue Limete Industriel<br>
+               <br><br>
+              <strong>Phone:</strong> + 2433385771<br>
+              <strong>Email:</strong> cliniquepromedis@gmail.com<br>
+              <strong>Plein temps:</strong> 24h/24<br>
+            </p>
+          </div>
+
+          <div class="col-lg-2 col-md-6 footer-links">
+            <h4>A propos</h4>
+            <ul>
+              <li> <a href="#">Historique</a></li>
+              <li><a href="#">Nous connaitre</a></li>
+            
+            </ul>
+          </div>
+
+          <div class="col-lg-3 col-md-6 footer-links">
+            <h4>Nos Services</h4>
+            <ul>
+              <li> <a href="#">CPN-CPS</a></li>
+              <li> <a href="#">Dentisterie</a></li>
+              <li> <a href="#">Irologie</a></li>
+              <li><a href="#">Ophtalmologie</a></li>
+              <li><a href="#">Pédiatrie</a></li>
+              <li> <a href="#">Irologie</a></li>
+              <li><a href="#">Gynécologie</a></li>
+              <li><a href="#">Pédiatrie</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-4 col-md-6 footer-newsletter">
+            <h4>Inscrivez-vous à notre newsletter</h4>
+            <p>Restez à jour avec les dernières avancées médicales, les conseils de santé et les événements communautaires en vous abonnant à notre newsletter.</p>
+            <form action="" method="post">
+              <input type="email" name="email"><input type="submit" value="Subscribe">
+            </form>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="container d-md-flex py-4">
+
+      <div class="me-md-auto text-center text-md-start">
+        <div class="copyright">
+          &copy; Copyright <strong><span>Promedis</span></strong>. Tous droit reservé
+        </div>
+        <div class="credits">
+          <!-- All the links in the footer should remain intact. -->
+          <!-- You can delete the links only if you purchased the pro version. -->
+          <!-- Licensing information: https://bootstrapmade.com/license/ -->
+          <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/medilab-free-medical-bootstrap-theme/ -->
+          Concus <a href="https://bootstrapmade.com/">Clinique Promedis</a>
+        </div>
+      </div>
+      <div class="social-links text-center text-md-right pt-3 pt-md-0">
+        <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
+        <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
+        <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
+        <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
+        <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+      </div>
+    </div>
+  </footer><!-- End Footer -->
+
+  <div id="preloader"></div>
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
+      class="bi bi-arrow-up-short"></i></a>
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+ 
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+  <script> 
+    const currentURL = window.location.href;  console.log(`L'URL actuelle est : ${currentURL}`);
+
+    console.log(currentURL)
+
+     // Sélectionner tous les liens de navigation
+     const navLinks = document.querySelectorAll('.navbar .nav-linkPage');
+
+     console.log(navLinks)
+
+// Parcourir les liens de navigation
+navLinks.forEach(link => {
+  // Vérifier si le lien correspond à l'URL actuelle
+  if (currentURL.includes(link.getAttribute('href'))) {
+    // Ajouter la classe 'active' au lien correspondant
+    link.classList.add('active');
+  } else {
+    // Supprimer la classe 'active' des autres liens
+    link.classList.remove('active');
+  }
+});
+</script>
+
+
+
+
+</body>
+
+</html>
