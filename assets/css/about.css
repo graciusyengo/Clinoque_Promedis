@@ -1827,6 +1827,8 @@ body {
     flex:3;
 }
 
+
+
 .foreignContact{
     display: flex;
     flex-wrap: wrap;
@@ -1874,6 +1876,10 @@ body {
 @media (max-width:500px){
     .sidebar{
         display: none;
+    }
+
+    .presentation{
+      margin-right: 30px;
     }
 
 
