@@ -72,6 +72,36 @@
         .doctor-info .phone {
             color: #5FA599;
         }
+
+        @media (max-width: 767.98px) {
+            .table {
+                display: none; /* Masquer le tableau */
+            }
+            .card-container {
+                display: block;
+            }
+            .card {
+                margin-bottom: 10px;
+                border: 1px solid #ddd;
+                border-radius: 0.5rem;
+                box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+            }
+            .card-header {
+                background-color: #007bff;
+                color: white;
+                font-weight: bold;
+            }
+            .card-body {
+                padding: 1rem;
+            }
+            .card .row {
+                margin-bottom: 0.5rem;
+            }
+            .card .col {
+                margin-bottom: 0.5rem;
+            }
+        }
+        
       </style>
     <!-- Favicons -->
     <link href="assets/img/favicon.png" rel="icon">
@@ -385,6 +415,73 @@
       </table>
   </div>
   
+
+
+  <div class="card-container d-block d-md-none">
+    <!-- Ligne 1 -->
+    <div class="card">
+        <div class="card-header">Dr. Dupont<br><span class="specialty">Cardiologue</span><br><span class="phone">01 23 45 67 89</span></div>
+        <div class="card-body">
+            <div class="row">
+                <div class="col"><strong>Lundi</strong></div>
+                <div class="col">9h-12h</div>
+            </div>
+            <div class="row">
+                <div class="col"><strong>Mardi</strong></div>
+                <div class="col">14h-17h</div>
+            </div>
+            <div class="row">
+                <div class="col"><strong>Mercredi</strong></div>
+                <div class="col">9h-12h</div>
+            </div>
+            <div class="row">
+                <div class="col"><strong>Jeudi</strong></div>
+                <div class="col">9h-12h<br>15h-18h</div>
+            </div>
+            <div class="row">
+                <div class="col"><strong>Vendredi</strong></div>
+                <div class="col">10h-13h</div>
+            </div>
+            <div class="row">
+                <div class="col"><strong>Samedi</strong></div>
+                <div class="col">11h-14h</div>
+            </div>
+        </div>
+    </div>
+    <!-- Répétez le bloc ci-dessus pour chaque médecin avec les horaires correspondants -->
+    <!-- Exemple pour Dr. Martin -->
+    <div class="card">
+        <div class="card-header">Dr. Martin<br><span class="specialty">Généraliste</span><br><span class="phone">01 23 45 67 90</span></div>
+        <div class="card-body">
+            <div class="row">
+                <div class="col"><strong>Lundi</strong></div>
+                <div class="col">10h-13h</div>
+            </div>
+            <div class="row">
+                <div class="col"><strong>Mardi</strong></div>
+                <div class="col">9h-12h</div>
+            </div>
+            <div class="row">
+                <div class="col"><strong>Mercredi</strong></div>
+                <div class="col">14h-17h</div>
+            </div>
+            <div class="row">
+                <div class="col"><strong>Jeudi</strong></div>
+                <div class="col">9h-12h</div>
+            </div>
+            <div class="row">
+                <div class="col"><strong>Vendredi</strong></div>
+                <div class="col">14h-17h</div>
+            </div>
+            <div class="row">
+                <div class="col"><strong>Samedi</strong></div>
+                <div class="col">9h-12h</div>
+            </div>
+        </div>
+    </div>
+    <!-- Répétez pour les autres médecins -->
+</div>
+</div>
 
 
 
