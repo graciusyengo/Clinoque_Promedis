@@ -1,0 +1,848 @@
+
+
+/*--------------------------------------------------------------
+# General
+--------------------------------------------------------------*/
+html,body{
+    height: 100%;
+  }
+  
+  body {
+    font-family: "Open Sans", sans-serif;
+    color: #444444;
+  
+  }
+  
+  a {
+    color: #444444;
+    text-decoration: none;
+  }
+  
+  a:hover {
+    color: #5FA599;
+    text-decoration: none;
+  }
+  
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: "Raleway", sans-serif;
+  }
+  
+  /*--------------------------------------------------------------
+  # Preloader
+  --------------------------------------------------------------*/
+  #preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 9999;
+    overflow: hidden;
+    background: #fff;
+  }
+  
+  #preloader:before {
+    content: "";
+    position: fixed;
+    top: calc(50% - 30px);
+    left: calc(50% - 30px);
+    border: 6px solid 
+    #9BD3CE;
+    border-top-color: #d1e6f9;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    animation: animate-preloader 1s linear infinite;
+  }
+  
+    /*--------------------------------------------------------------
+    # Back to top button
+    --------------------------------------------------------------*/
+    .back-to-top {
+      position: fixed;
+      visibility: hidden;
+      opacity: 0;
+      right: 15px;
+      bottom: 15px;
+      z-index: 996;
+      background: #5FA599;
+      width: 40px;
+      height: 40px;
+      border-radius: 4px;
+      transition: all 0.4s;
+    }
+    
+    .back-to-top i {
+      font-size: 28px;
+      color: #fff;
+      line-height: 0;
+    }
+    
+    .back-to-top:hover {
+      background: #5FA599;
+      color: #fff;
+    }
+    
+    .back-to-top.active {
+      visibility: visible;
+      opacity: 1;
+    }
+    
+    .datepicker-dropdown {
+      padding: 20px !important;
+    }
+  
+  /*--------------------------------------------------------------
+    # Top Bar
+    --------------------------------------------------------------*/
+    #topbar {
+      background: #fff;
+      height: 40px;
+      font-size: 14px;
+      transition: all 0.5s;
+      z-index: 996;
+    }
+    
+    #topbar.topbar-scrolled {
+      top: -40px;
+    }
+    
+    #topbar .contact-info a {
+      line-height: 1;
+      color: #444444;
+      transition: 0.3s;
+    }
+    
+    #topbar .contact-info a:hover {
+      color: #79B733;
+    }
+    
+    #topbar .contact-info i {
+      color: #5FA599;
+      padding-right: 4px;
+      margin-left: 15px;
+      line-height: 0;
+    }
+    
+    #topbar .contact-info i:first-child {
+      margin-left: 0;
+    }
+    
+    #topbar .social-links a {
+      color: #5FA599;
+      padding-left: 15px;
+      display: inline-block;
+      line-height: 1px;
+      transition: 0.3s;
+    }
+    
+    #topbar .social-links a:hover {
+      color: #5FA599;
+    }
+    
+    #topbar .social-links a:first-child {
+      border-left: 0;
+    }
+  
+  
+  
+  
+  
+    #header {
+      background: #fff;
+      transition: all 0.5s;
+      z-index: 997;
+      padding: 15px 0;
+      top: 40px;
+      box-shadow: 0px 2px 15px rgba(25, 119, 204, 0.1);
+    }
+    
+    #header.header-scrolled {
+      top: 0;
+    }
+    
+    #header .logo {
+      font-size: 30px;
+      margin: 0;
+      padding: 0;
+      line-height: 1;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      font-family: "Poppins", sans-serif;
+    }
+    
+    #header .logo a {
+      color: #637271;
+    }
+    
+    #header .logo img {
+      max-height: 40px;
+    }
+    .iconWhatsapp{
+      position: absolute;
+      left: 850px;
+      bottom: 23px;
+      font-size: 25px;
+      color: #5FA599;
+      z-index: 5;
+    }
+    .iconWhatsapp{
+      position: absolute;
+      right: -10px;
+      bottom: 23px;
+      font-size: 25px;
+      color: #5FA599;
+    }
+    
+    /**
+    * Appointment Button *
+    */
+    .appointment-btn {
+     
+      margin-left: 25px;
+      background: #5FA599;
+      color: #fff;
+      border-radius: 50px;
+      padding: 8px 25px;
+      white-space: nowrap;
+      transition: 0.3s;
+      font-size: 14px;
+      display: inline-block;
+      transition: all 0.3s ease;
+    }
+    
+    .appointment-btn:hover {
+      background: #63817c;
+      color: #fff;
+      transform: scale(1.05);
+    }
+    
+    @media (max-width: 768px) {
+      .appointment-btn {
+        margin: 0 15px 0 0;
+        padding: 6px 18px;
+      }
+    }
+    
+    /*--------------------------------------------------------------
+    # Navigation Menu
+    --------------------------------------------------------------*/
+    /**
+    * Desktop Navigation 
+    */
+    .navbar {
+      padding: 0;
+    
+    }
+    
+    .navbar ul {
+      margin: 0;
+      padding: 0;
+      display: flex;
+      list-style: none;
+      align-items: center;
+    }
+    
+    .navbar li {
+      position: relative;
+    }
+    
+    .navbar>ul>li {
+      position: relative;
+      white-space: nowrap;
+      padding: 8px 0 8px 20px;
+    }
+    
+    .navbar a,
+    .navbar a:focus {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 14px;
+      color: #444;
+      white-space: nowrap;
+      transition: 0.3s;
+      border-bottom: 2px solid #fff;
+      padding: 5px 2px;
+    }
+    
+    .navbar a i,
+    .navbar a:focus i {
+      font-size: 12px;
+      line-height: 0;
+      margin-left: 5px;
+    }
+    
+    .navbar a:hover,
+    .navbar .active,
+    .navbar .active:focus,
+    .navbar li:hover>a {
+      color: #5FA599;
+      border-color: #5FA599;
+    }
+    
+    .navbar .dropdown ul {
+      display: block;
+      position: absolute;
+      left: 20px;
+      top: calc(100% + 30px);
+      margin: 0;
+      padding: 10px 0;
+      z-index: 99;
+      opacity: 0;
+      visibility: hidden;
+      background: #fff;
+      box-shadow: 0px 0px 30px rgba(127, 137, 161, 0.25);
+      transition: 0.3s;
+    }
+    
+    .navbar .dropdown ul li {
+      min-width: 200px;
+    }
+    
+    .navbar .dropdown ul a {
+      padding: 10px 20px;
+      font-size: 14px;
+      font-weight: 500;
+      text-transform: none;
+      color: #5FA599;
+      border: none;
+    }
+    
+    .navbar .dropdown ul a i {
+      font-size: 12px;
+    }
+    
+    .navbar .dropdown ul a:hover,
+    .navbar .dropdown ul .active:hover,
+    .navbar .dropdown ul li:hover>a {
+      color: #63817c;
+    }
+    
+    .navbar .dropdown:hover>ul {
+      opacity: 1;
+      top: 100%;
+      visibility: visible;
+    }
+    
+    .navbar .dropdown .dropdown ul {
+      top: 0;
+      left: calc(100% - 30px);
+      visibility: hidden;
+    }
+    
+    .navbar .dropdown .dropdown:hover>ul {
+      opacity: 1;
+      top: 0;
+      left: 100%;
+      visibility: visible;
+    }
+    
+    .btn-contact{
+      position: relative;
+    }
+    .iconWhatsapp{
+      position: absolute;
+      left: 220px;
+      cursor: pointer;
+    }
+    
+    @media (max-width: 1366px) {
+      .navbar .dropdown .dropdown ul {
+        left: -90%;
+      }
+    
+      .navbar .dropdown .dropdown:hover>ul {
+        left: -100%;
+      }
+    }
+    
+    /**
+    * Mobile Navigation 
+    */
+    .mobile-nav-toggle {
+      color: #2c4964;
+      font-size: 28px;
+      cursor: pointer;
+      display: none;
+      line-height: 0;
+      transition: 0.5s;
+    }
+    
+    .mobile-nav-toggle.bi-x {
+      color: #fff;
+    }
+    
+    @media (max-width: 991px) {
+      .mobile-nav-toggle {
+        display: block;
+      }
+    
+      .navbar ul {
+        display: none;
+      }
+    }
+    
+    .navbar-mobile {
+      position: fixed;
+      overflow: hidden;
+      top: 0;
+      right: 0;
+      left: 0;
+      bottom: 0;
+      background: rgba(28, 47, 65, 0.9);
+      transition: 0.3s;
+      z-index: 999;
+    }
+    
+    .navbar-mobile .mobile-nav-toggle {
+      position: absolute;
+      top: 15px;
+      right: 15px;
+    }
+    
+    .navbar-mobile ul {
+      display: block;
+      position: absolute;
+      top: 55px;
+      right: 15px;
+      bottom: 15px;
+      left: 15px;
+      padding: 10px 0;
+      background-color: #fff;
+      overflow-y: auto;
+      transition: 0.3s;
+    }
+    
+    .navbar-mobile>ul>li {
+      padding: 0;
+    }
+    
+    .navbar-mobile a,
+    .navbar-mobile a:focus {
+      padding: 10px 20px;
+      font-size: 15px;
+      color: #444;
+      border: none;
+    }
+    
+    .navbar-mobile a:hover,
+    .navbar-mobile .active,
+    .navbar-mobile li:hover>a {
+      color: #79B733
+      ;
+    }
+    
+    .navbar-mobile .getstarted,
+    .navbar-mobile .getstarted:focus {
+      margin: 15px;
+    }
+    
+    .navbar-mobile .dropdown ul {
+      position: static;
+      display: none;
+      margin: 10px 20px;
+      padding: 10px 0;
+      z-index: 99;
+      opacity: 1;
+      visibility: visible;
+      background: #fff;
+      box-shadow: 0px 0px 30px rgba(127, 137, 161, 0.25);
+    }
+    
+    .navbar-mobile .dropdown ul li {
+      min-width: 200px;
+    }
+    
+    .navbar-mobile .dropdown ul a {
+      padding: 10px 20px;
+    }
+    
+    .navbar-mobile .dropdown ul a i {
+      font-size: 12px;
+    }
+    
+    .navbar-mobile .dropdown ul a:hover,
+    .navbar-mobile .dropdown ul .active:hover,
+    .navbar-mobile .dropdown ul li:hover>a {
+      color: #1977cc;
+    }
+    
+    .navbar-mobile .dropdown>.dropdown-active {
+      display: block;
+    }
+    
+    
+  
+  
+  
+  
+  
+  
+  
+    #hero {
+  
+      width: 100%;
+      height: 50vh;
+      background-image: linear-gradient(rgba(110,110,110,0.4),rgba(90,90,90,0.4)), url("../img/main.jpeg");
+      background-size: cover;
+  
+    }
+  
+    #hero .container {
+      position: relative;
+    }
+  
+    #hero h1 {
+      margin: 75px 0px 0px 0px !important;
+      font-size: 48px;
+      font-weight: 700;
+      line-height: 56px;
+      text-transform: uppercase;
+      color: #fff;
+    }
+  
+    #hero h2 {
+      color: #fff;
+      margin: 10px 0 0 0;
+      font-size: 24px;
+    }
+    
+    #hero .btn-get-started {
+      font-family: "Raleway", sans-serif;
+      text-transform: uppercase;
+      font-weight: 500;
+      font-size: 14px;
+      letter-spacing: 1px;
+      display: inline-block;
+      padding: 12px 35px;
+      margin-top: 30px;
+      border-radius: 50px;
+      transition: 0.5s;
+      color: #fff;
+      background: #5FA599;
+      transition: all 0.3s ease;
+    }
+  
+  
+    #hero .btn-get-started:hover {
+      background: #63817c;
+      transform: scale(1.05);
+    }
+    
+    @media (min-width: 1024px) {
+      #hero {
+        background-attachment: fixed;
+      }
+    }
+  
+  
+    @media (max-width: 992px) {
+      #hero {
+        width: 100%;
+        margin-bottom: 0;
+        height: 40vh;
+        margin-top: 40px;
+   
+      }
+     
+    
+      #hero .container {
+        padding-bottom: 63px;
+      }
+  
+      #heroGeneralConsultaion h2{
+          font-size: 18px;
+        line-height: 24px;
+        margin-bottom: 30px;
+  
+        }
+    
+      #hero h1 {
+        font-size: 28px;
+        line-height: 36px;
+      }
+      
+    
+      #hero h2 {
+        font-size: 18px;
+        line-height: 24px;
+        margin-bottom: 30px;
+      }
+  
+      #heroGeneralConsultation{
+     display: none !important;
+  
+      }
+  
+      #heroGeneralConsultation .container{
+      position: static!important;
+      width: 100px!important;
+  
+      }
+  
+      #heroGeneralConsultaion h1{
+          font-size: 28px;
+          line-height:36px ;
+        }
+  
+        #heroGeneralConsultaion h2{
+          font-size: 18px;
+        line-height: 24px;
+        margin-bottom: 30px;
+        }
+    }
+    
+    @media (max-height: 600px) {
+      #hero {
+        height: 110vh;
+      }
+    }
+    
+  
+    #heroGeneralConsultation{
+  
+      width: 70%;
+      margin: 0 auto;
+      height: 80vh;
+      position: relative;
+      height: 400px;
+      background-color: green;
+      background-image: linear-gradient(rgba(110,110,110,0.4),rgba(90,90,90,0.4)), url("../img/hero-bg.jpg");
+      background-size: cover;
+       margin-left: 250px;
+      margin-top: 100px;
+      margin-bottom: 100px;
+      /* margin-bottom: -200px; */
+  
+    }
+  
+    #heroGeneralConsultation .container{
+      position: absolute;
+      left: 120px;
+      bottom: -80px;
+      height: 200px;
+      box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+      width: auto;
+      background-color: white;
+      padding: 40px;
+   
+  
+    }
+  
+    #heroGeneralConsultation .container .mr{
+      margin-right: 200px;
+  
+  
+    }
+  
+    .hours,.price{
+      color: #A0A3A8;
+      margin-bottom: 10px;
+    }
+  
+    .text, .time{
+     color: #27477D;
+     font-size: 20px;
+    }
+  
+    
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+      /*--------------------------------------------------------------
+    # Footer
+    --------------------------------------------------------------*/
+    #footer {
+      color: #444444;
+      font-size: 14px;
+      background: #f1f7fd;
+  
+    }
+    
+    #footer .footer-top {
+      padding: 60px 0 30px 0;
+      background: #fff;
+      box-shadow: 0px 2px 15px rgba(25, 119, 204, 0.1);
+      /* margin-top: 390px; */
+    }
+    
+    #footer .footer-top .footer-contact {
+      margin-bottom: 30px;
+    }
+    
+    #footer .footer-top .footer-contact h4 {
+      font-size: 22px;
+      margin: 0 0 30px 0;
+      padding: 2px 0 2px 0;
+      line-height: 1;
+      font-weight: 700;
+    }
+    
+    #footer .footer-top .footer-contact p {
+      font-size: 14px;
+      line-height: 24px;
+      margin-bottom: 0;
+      font-family: "Raleway", sans-serif;
+      color: #777777;
+    }
+    
+    #footer .footer-top h4 {
+      font-size: 16px;
+      font-weight: bold;
+      color: #444444;
+      position: relative;
+      padding-bottom: 12px;
+    }
+    
+    #footer .footer-top .footer-links {
+      margin-bottom: 30px;
+    }
+    
+    #footer .footer-top .footer-links ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    
+    #footer .footer-top .footer-links ul i {
+      padding-right: 2px;
+      color: #1c84e3;
+      font-size: 18px;
+      line-height: 1;
+    }
+    
+    #footer .footer-top .footer-links ul li {
+      padding: 10px 0;
+      display: flex;
+      align-items: center;
+    }
+    
+    #footer .footer-top .footer-links ul li:first-child {
+      padding-top: 0;
+    }
+    
+    #footer .footer-top .footer-links ul a {
+      color: #777777;
+      transition: 0.3s;
+      display: inline-block;
+      line-height: 1;
+    }
+    
+    #footer .footer-top .footer-links ul a:hover {
+      text-decoration: none;
+      color: #5FA599;
+    }
+    
+    #footer .footer-newsletter {
+      font-size: 15px;
+    }
+    
+    #footer .footer-newsletter h4 {
+      font-size: 16px;
+      font-weight: bold;
+      color: #444444;
+      position: relative;
+      padding-bottom: 12px;
+    }
+    
+    #footer .footer-newsletter form {
+      margin-top: 30px;
+      background: #fff;
+      padding: 6px 10px;
+      position: relative;
+      border-radius: 50px;
+      text-align: left;
+      border: 1px solid #bfdcf7;
+    }
+    
+    #footer .footer-newsletter form input[type=email] {
+      border: 0;
+      padding: 4px 8px;
+      width: calc(100% - 100px);
+    }
+    
+    #footer .footer-newsletter form input[type=submit] {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      border: 0;
+      background: none;
+      font-size: 16px;
+      padding: 0 20px;
+      background: #5FA599;
+      color: #fff;
+      transition: 0.3s;
+      border-radius: 50px;
+    }
+    
+    #footer .footer-newsletter form input[type=submit]:hover {
+      background: #1c84e3;
+    }
+    
+    #footer .credits {
+      padding-top: 5px;
+      font-size: 13px;
+      color: #444444;
+    }
+    
+    #footer .social-links a {
+      font-size: 18px;
+      display: inline-block;
+      background: #5FA599;
+      color: #fff;
+      line-height: 1;
+      padding: 8px 0;
+      margin-right: 4px;
+      border-radius: 50%;
+      text-align: center;
+      width: 36px;
+      height: 36px;
+      transition: 0.3s;
+    }
+    
+    #footer .social-links a:hover {
+      background: #63817c;
+      color: #fff;
+      text-decoration: none;
+    }
+  
+  
+  
+  
+    
+  
+  .title{
+    font-weight: 600;
+  }
+  
+    .paragraphe{
+      text-align: justify;
+    }
+  
+  
+    @media (max-width:992px){
+  
+      .paragraphe{
+        text-align: justify;
+      }
+    }
+     

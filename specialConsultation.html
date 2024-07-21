@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consultation-Spéciale</title>
+    <style>
+       #infoConsultationGeneral .container {
+          max-width: 1200px;
+          margin: 0 auto;
+          padding: 40px;
+        }
+    
+        h1 {
+       
+          margin-bottom: 30px;
+        }
+    
+        h2 {
+          margin-top: 40px;
+        }
+    
+        p {
+          line-height: 1.6;
+          margin-bottom: 20px;
+        }
+    
+        .cta {
+        
+          margin-top: 40px;
+        }
+    
+        .cta a {
+          background-color: #5FA599;
+          border-radius: 50px;
+          padding: 8px 25px;
+          white-space: nowrap;
+          color: white;
+          padding: 12px 24px;
+          text-decoration: none;
+      
+        }
+    
+        .cta a:hover {
+          background-color: #63817c;
+        }
+
+
+
+        .table-container {
+            margin: 20px;
+        }
+        .table thead th {
+            background-color: #5FA599;
+            color: white;
+        }
+        .table tbody tr:nth-child(odd) {
+            background-color: #f9f9f9;
+        }
+        .table tbody tr:hover {
+            background-color: #e9ecef;
+        }
+        .table td, .table th {
+            text-align: center;
+        }
+        .doctor-info {
+            font-weight: bold;
+        }
+        .doctor-info .specialty {
+            font-weight: normal;
+        }
+        .doctor-info .phone {
+            color: #5FA599;
+        }
+      </style>
+    <!-- Favicons -->
+    <link href="assets/img/favicon.png" rel="icon">
+    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+        rel="stylesheet">
+
+    <!-- Vendor CSS Files -->
+    <link href="assets/vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
+    <link href="assets/vendor/animate.css/animate.min.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+    <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+    <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+    <link href="assets/css/specialConsultation.css" rel="stylesheet">
+        <!-- Template Main CSS File -->
+      
+
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+        </script>
+    
+        <script type="text/javascript">
+            (function () {
+                emailjs.init({
+                    publicKey: "UZF1ohsXpSwqR_Nyk",
+                });
+            })();
+        </script>
+</head>
+<body>
+   
+
+     <div id="topbar" class="d-flex align-items-center fixed-top">
+        <div class="container d-flex justify-content-between">
+            <div class="contact-info d-flex align-items-center">
+                <i class="bi bi-envelope"></i> <a href="mailto:contact@example.com">cliniquepromedis@gmail.com</a>
+                <i class="bi bi-phone"></i> + 24389980029
+            </div>
+            <div class="d-none d-lg-flex social-links align-items-center">
+                <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
+                <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
+                <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
+                <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></i></a>
+            </div>
+        </div>
+    </div>  
+
+
+
+       <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top">
+    <div class="container d-flex align-items-center">
+
+
+      <!-- Uncomment below if you prefer to use an image logo -->
+      <a href="index.html" class="logo me-auto"><img src="assets/img/logo.jpeg" alt="" class="img-fluid"></a>
+
+      <nav id="navbar" class="navbar order-last order-lg-0">
+        <ul>
+          <li><a class="nav-link scrollto active" href="/">Accueil</a></li>
+          <li><a class="nav-link scrollto" href="./about.html">A propos</a></li>
+          <li><a class="nav-link scrollto" href="./succursales.html">Succursales</a></li>
+          <li><a class="nav-link scrollto" href="./index.html#departments">Departements</a> </i></li>
+          <li><a class="nav-link scrollto" href="./index.html#doctors">Medecins</a></li>
+          <li class="dropdown"><a href=" ./index.html#services"><span>Services</span> <i class="bi bi-chevron-down"></i></a>
+
+            <ul>
+              <li>
+                <a href="./generalConsultaion.html">Consultation Generale  24/24</a>
+              </li>
+              <li>
+                <a href="/consultationSpecialise.html">Consultations spécialisés </a>
+              </li>
+              <li>
+              <a href="/pediatrie">
+              Pédiatrie 
+              </a>
+              </li>
+              
+              <li>
+              <a href="/gynecologie">
+                Gynecologie
+              </a>
+              </li>
+            
+              <li>
+                <a href="/internalMedecine">Médecine Interne  </a>
+              </li>
+              <li>
+                <a href="/ophtamologie">Ophtamologie </a>
+              </li>
+              <li>
+                <a href="/dermatologie">Dérmatologie </a>
+              </li>
+              <li>
+                <a href="/orthopedie">Orthopédie </a>
+              </li>
+              <li>
+                <a href="#">Neuropychiatrie </a>
+              </li>
+              <li>
+                <a href="#">ORL </a>
+              </li>
+              <li>
+                <a href="#">Dentisterie </a>
+              </li>
+              <li>
+                <a href="#">Urologie </a>
+              </li>
+              <li>
+                <a href="#">Cardiologie </a>
+              </li>
+              <li>
+                <a href="#">CPN CPS </a>
+              </li>
+            </ul>
+          </li>
+          <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+     
+      </nav><!-- .navbar -->
+
+      <div class="btn-contact">
+
+      <a href="#appointment" class="appointment-btn scrollto"><span class="d-none d-md-inline"></span> Prenez un
+        rendez-vous
+
+        
+      </a>
+      <div class="iconWhatsapp" onclick="whatsappRedirect()"> <i class='fab fa-whatsapp-square'></i>
+      </div>
+    </div>
+   
+
+    </div>
+  </header><!-- End Header -->
+
+<section id="hero" class="d-flex align-items-center" >
+        <div class="container">
+            <h1>Consultation Spéciale </h1>
+        </div>
+    </section> 
+
+ <section id="heroGeneralConsultation" class="d-flex align-items-center" >
+        <div class="container d-flex align-items-center justify-content-center">
+
+            <div class="d-flex flex-column mr">
+                <span class="hours"> Heure service</span>
+                <span class="time"> Sur rendez-vous</span>
+            </div>
+
+            <div class="d-flex flex-column mr">
+                <span class="price">Montant</span>
+                <span class="text">  Ça depend de cas</span>
+            </div>
+
+           
+
+            <div class="btn-contact">
+                <a href="index.html#appointment" class="appointment-btn scrollto"><span class="d-none d-md-inline"></span> Prenez
+                    un
+                    rendez-vous
+                </a>
+                <div class="iconWhatsapp" onclick="whatsappRedirect()"> <i class='fab fa-whatsapp-square'></i>
+                </div>
+            </div>
+         
+          
+              
+          
+           
+        </div>
+    </section> 
+
+    <section class="consultation-special">
+      <div class="container">
+        <h1>Consultation Spéciale</h1>
+        <p>Notre équipe de médecins spécialisés offre des consultations sur rendez-vous pour des soins de santé spécialisés. Nous sommes fiers de proposer une expertise de pointe dans les domaines les plus complexes de la médecine.</p>
+        <p>Notre objectif est de vous offrir un suivi personnalisé et des traitements à la pointe de l'innovation médicale. Nous mettons tout en œuvre pour vous assurer une prise en charge de qualité et des résultats optimaux.</p>
+    
+        <div class="row">
+          <div class="col-md-6">
+            <h2>Domaines de Spécialité</h2>
+            <ul>
+              <li>Cardiologie</li>
+              <li>Neurologie</li>
+              <li>Oncologie</li>
+              <li>Pédiatrie</li>
+              <li>Chirurgie orthopédique</li>
+              <li>Dermatologie</li>
+              <li>Echographie</li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <div class="container table-container">
+      <table class="table table-bordered table-striped table-hover">
+          <thead>
+              <tr>
+                  <th>#</th>
+                  <th>Lundi</th>
+                  <th>Mardi</th>
+                  <th>Mercredi</th>
+                  <th>Jeudi</th>
+                  <th>Vendredi</th>
+                  <th>Samedi</th>
+              </tr>
+          </thead>
+          <tbody>
+              <!-- Ligne 1 -->
+              <tr>
+                  <td class="doctor-info">Dr. Dupont<br><span class="specialty">Cardiologue</span><br><span class="phone">01 23 45 67 89</span></td>
+                  <td>9h-12h</td>
+                  <td>14h-17h</td>
+                  <td>9h-12h</td>
+                  <td>9h-12h<br>15h-18h</td>
+                  <td>10h-13h</td>
+                  <td>11h-14h</td>
+              </tr>
+              <!-- Ligne 2 -->
+              <tr>
+                  <td class="doctor-info">Dr. Martin<br><span class="specialty">Généraliste</span><br><span class="phone">01 23 45 67 90</span></td>
+                  <td>10h-13h</td>
+                  <td>9h-12h</td>
+                  <td>14h-17h</td>
+                  <td>9h-12h</td>
+                  <td>14h-17h</td>
+                  <td>9h-12h</td>
+              </tr>
+              <!-- Ligne 3 -->
+              <tr>
+                  <td class="doctor-info">Dr. Lefebvre<br><span class="specialty">Dermatologue</span><br><span class="phone">01 23 45 67 91</span></td>
+                  <td>9h-12h</td>
+                  <td>10h-13h</td>
+                  <td>14h-17h</td>
+                  <td>10h-13h</td>
+                  <td>9h-12h</td>
+                  <td>14h-17h</td>
+              </tr>
+              <!-- Ligne 4 -->
+              <tr>
+                  <td class="doctor-info">Dr. Dubois<br><span class="specialty">Ostéopathe</span><br><span class="phone">01 23 45 67 92</span></td>
+                  <td>14h-17h</td>
+                  <td>9h-12h</td>
+                  <td>10h-13h</td>
+                  <td>14h-17h</td>
+                  <td>9h-12h</td>
+                  <td>10h-13h</td>
+              </tr>
+              <!-- Ligne 5 -->
+              <tr>
+                  <td class="doctor-info">Dr. Girard<br><span class="specialty">Ophtalmologue</span><br><span class="phone">01 23 45 67 93</span></td>
+                  <td>10h-13h</td>
+                  <td>14h-17h</td>
+                  <td>9h-12h</td>
+                  <td>14h-17h</td>
+                  <td>10h-13h</td>
+                  <td>14h-17h</td>
+              </tr>
+              <!-- Ligne 6 -->
+              <tr>
+                  <td class="doctor-info">Dr. Lambert<br><span class="specialty">Rhumatologue</span><br><span class="phone">01 23 45 67 94</span></td>
+                  <td>9h-12h</td>
+                  <td>10h-13h</td>
+                  <td>14h-17h</td>
+                  <td>9h-12h</td>
+                  <td>14h-17h</td>
+                  <td>11h-14h</td>
+              </tr>
+              <!-- Ligne 7 -->
+              <tr>
+                  <td class="doctor-info">Dr. Moreau<br><span class="specialty">Endocrinologue</span><br><span class="phone">01 23 45 67 95</span></td>
+                  <td>14h-17h</td>
+                  <td>9h-12h</td>
+                  <td>10h-13h</td>
+                  <td>14h-17h</td>
+                  <td>9h-12h</td>
+                  <td>14h-17h</td>
+              </tr>
+              <!-- Ligne 8 -->
+              <tr>
+                  <td class="doctor-info">Dr. Carpentier<br><span class="specialty">Pédiatre</span><br><span class="phone">01 23 45 67 96</span></td>
+                  <td>10h-13h</td>
+                  <td>14h-17h</td>
+                  <td>9h-12h</td>
+                  <td>10h-13h</td>
+                  <td>14h-17h</td>
+                  <td>9h-12h</td>
+              </tr>
+              <!-- Ligne 9 -->
+              <tr>
+                  <td class="doctor-info">Dr. Petit<br><span class="specialty">Neurologue</span><br><span class="phone">01 23 45 67 97</span></td>
+                  <td>9h-12h</td>
+                  <td>14h-17h</td>
+                  <td>10h-13h</td>
+                  <td>14h-17h</td>
+                  <td>10h-13h</td>
+                  <td>14h-17h</td>
+              </tr>
+          </tbody>
+      </table>
+  </div>
+  
+
+
+
+
+
+    <footer id="footer" >
+
+        <div class="footer-top">
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-lg-3 col-md-6 footer-contact">
+                        <h3>Clinique Promedis</h3>
+                        <p>
+                            N 23/C Industriel <br>
+                            10 ème Rue Limete Industriel<br>
+                            <br><br>
+                            <strong>Phone:</strong> + 2433385771<br>
+                            <strong>Email:</strong> cliniquepromedis@gmail.com<br>
+                            <strong>Plein temps:</strong> 24h/24<br>
+                        </p>
+                    </div>
+
+                    <div class="col-lg-2 col-md-6 footer-links">
+                        <h4>A propos</h4>
+                        <ul>
+                            <li> <a href="#">A propos </a></li>
+                            <li><a href="#">Nos Surcursales</a></li>
+
+                        </ul>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6 footer-links">
+                        <h4>Nos Services</h4>
+                        <ul>
+                            <li> <a href="#">CPN-CPS</a></li>
+                            <li> <a href="#">Dentisterie</a></li>
+                            <li> <a href="#">Irologie</a></li>
+                            <li><a href="#">Ophtalmologie</a></li>
+                            <li><a href="#">Pédiatrie</a></li>
+                            <li> <a href="#">Irologie</a></li>
+                            <li><a href="#">Gynécologie</a></li>
+                            <li><a href="#">Pédiatrie</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 footer-newsletter">
+                        <h4>Inscrivez-vous à notre newsletter</h4>
+                        <p>Restez à jour avec les dernières avancées médicales, les conseils de santé et les événements
+                            communautaires en vous abonnant à notre newsletter.</p>
+                        <form action="" method="post">
+                            <input type="email" name="email"><input type="submit" value="Subscribe">
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="container d-md-flex py-4">
+
+            <div class="me-md-auto text-center text-md-start">
+                <div class="copyright">
+                    &copy; Copyright <strong><span>Promedis</span></strong>. Tous droit reservé
+                </div>
+                <div class="credits">
+                   
+                    Concus <a href="https://bootstrapmade.com/">Clinique Promedis</a>
+                </div>
+            </div>
+            <div class="social-links text-center text-md-right pt-3 pt-md-0">
+                <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
+                <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
+                <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
+                <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
+                <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+            </div>
+        </div>
+    </footer> 
+
+
+    <div id="preloader"></div>
+    <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
+            class="bi bi-arrow-up-short"></i></a>
+    <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+    <script src="assets/vendor/php-email-form/validate.js"></script>
+
+    <!-- Template Main JS File -->
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
