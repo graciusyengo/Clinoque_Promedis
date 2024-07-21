@@ -48,8 +48,10 @@
 
 
         .table-container {
-            margin: 20px;
-        }
+            margin-top: 30px;
+                 }
+
+       
         .table thead th {
             background-color: #5FA599;
             color: white;
@@ -72,7 +74,6 @@
         .doctor-info .phone {
             color: #5FA599;
         }
-
         @media (max-width: 767.98px) {
             .table {
                 display: none; /* Masquer le tableau */
@@ -84,12 +85,16 @@
                 margin-bottom: 10px;
                 border: 1px solid #ddd;
                 border-radius: 0.5rem;
-                box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+                background-color: #fff;
             }
             .card-header {
                 background-color: #007bff;
                 color: white;
                 font-weight: bold;
+                padding: 1rem;
+                border-bottom: 1px solid #0056b3;
+                border-radius: 0.5rem 0.5rem 0 0;
             }
             .card-body {
                 padding: 1rem;
@@ -99,6 +104,25 @@
             }
             .card .col {
                 margin-bottom: 0.5rem;
+            }
+            .card .row div:first-child {
+                font-weight: bold;
+            }
+            .card .row div:last-child {
+                color: #333;
+            }
+            .card .btn {
+                background-color: #5FA599;
+                color: white;
+                border: none;
+                border-radius: 0.25rem;
+                padding: 0.5rem;
+                text-align: center;
+                display: block;
+                margin-top: 1rem;
+            }
+            .card .btn:hover {
+                background-color: #63817c;
             }
         }
         
@@ -275,22 +299,18 @@
                 </div>
             </div>
          
-          
-              
-          
-           
         </div>
     </section> 
 
     <section class="consultation-special">
       <div class="container">
-        <h1>Consultation Spéciale</h1>
+        <h1 class="fw-bold">Consultation Spéciale</h1>
         <p>Notre équipe de médecins spécialisés offre des consultations sur rendez-vous pour des soins de santé spécialisés. Nous sommes fiers de proposer une expertise de pointe dans les domaines les plus complexes de la médecine.</p>
         <p>Notre objectif est de vous offrir un suivi personnalisé et des traitements à la pointe de l'innovation médicale. Nous mettons tout en œuvre pour vous assurer une prise en charge de qualité et des résultats optimaux.</p>
     
         <div class="row">
           <div class="col-md-6">
-            <h2>Domaines de Spécialité</h2>
+            <h2 class="fw-bold">Domaines de Spécialité</h2>
             <ul>
               <li>Cardiologie</li>
               <li>Neurologie</li>
@@ -304,123 +324,130 @@
 
         </div>
       </div>
+
+
+      <div class="container table-container ml">
+        <h1 class="fw-bold">Horaire des Medecins Spécialistes</h1>
+        <table class="table table-bordered table-striped table-hover">
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Lundi</th>
+                    <th>Mardi</th>
+                    <th>Mercredi</th>
+                    <th>Jeudi</th>
+                    <th>Vendredi</th>
+                    <th>Samedi</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Ligne 1 -->
+                <tr>
+                    <td class="doctor-info">Dr. Kimpuatu<br><span class="specialty">Interniste</span><br><span class="phone">+ 243 995127365</span></td>
+                    <td></td>
+                    <td>12h</td>
+                    <td></td>
+                    <td><br></td>
+                    <td></td>
+                    <td>12h</td>
+                </tr>
+                <!-- Ligne 2 -->
+                <tr>
+                    <td class="doctor-info">Dr. Menayame<br><span class="specialty">Gynecologue</span><br><span class="phone">+243 818105260</span></td>
+                    <td>15h</td>
+                    <td></td>
+                    <td></td>
+                    <td>15h</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <!-- Ligne 3 -->
+                <tr>
+                    <td class="doctor-info">Dr. Ika<br><span class="specialty">Dermatologue</span><br><span class="phone">+243 998650388</span></td>
+                    <td></td>
+                    <td></td>
+                    <td>12h</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <!-- Ligne 4 -->
+                <tr>
+                    <td class="doctor-info">Dr. Rebecca<br><span class="specialty">Ophtamologue</span><br><span class="phone">+ 243 81048662</span></td>
+                    <td></td>
+                    <td></td>
+                    <td>12h</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <!-- Ligne 5 -->
+                <tr>
+                    <td class="doctor-info">Dr. Bronse<br><span class="specialty">Dentiste</span><br><span class="phone">+ 243 819482422</span></td>
+                    <td></td>
+                    <td>10h</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <!-- Ligne 6 -->
+                <tr>
+                    <td class="doctor-info">Dr. Bengi<br><span class="specialty">Kine</span><br><span class="phone">+ 243 816123555</span></td>
+                    <td>8h</td>
+                    <td></td>
+                    <td>8h</td>
+                    <td></td>
+                    <td></td>
+                    <td>8h</td>
+                </tr>
+             
+                <!-- Ligne 8 -->
+                <tr>
+                    <td class="doctor-info">Dr. Banza<br><span class="specialty">Pédiatre</span><br><span class="phone">+ 243 824533459</span></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>9h</td>
+                    <td>9h</td>
+                    <td></td>
+                </tr>
+                <!-- Ligne 9 -->
+                <tr>
+                    <td class="doctor-info">Dr. Corine<br><span class="specialty">Pédiatre</span><br><span class="phone">+ 243 819530349</span></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>9h</td>
+                    <td>9h</td>
+                    <td></td>
+                </tr>
+
+                <tr>
+                  <td class="doctor-info">Dr. Mbambu<br><span class="specialty">ORL</span><br><span class="phone">+ 243 852347509</span></td>
+                  <td></td>
+                  <td>08H</td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+              </tr>
+            </tbody>
+        </table>
+    </div>
     </section>
 
 
-    <div class="container table-container">
-      <table class="table table-bordered table-striped table-hover">
-          <thead>
-              <tr>
-                  <th>#</th>
-                  <th>Lundi</th>
-                  <th>Mardi</th>
-                  <th>Mercredi</th>
-                  <th>Jeudi</th>
-                  <th>Vendredi</th>
-                  <th>Samedi</th>
-              </tr>
-          </thead>
-          <tbody>
-              <!-- Ligne 1 -->
-              <tr>
-                  <td class="doctor-info">Dr. Dupont<br><span class="specialty">Cardiologue</span><br><span class="phone">01 23 45 67 89</span></td>
-                  <td>9h-12h</td>
-                  <td>14h-17h</td>
-                  <td>9h-12h</td>
-                  <td>9h-12h<br>15h-18h</td>
-                  <td>10h-13h</td>
-                  <td>11h-14h</td>
-              </tr>
-              <!-- Ligne 2 -->
-              <tr>
-                  <td class="doctor-info">Dr. Martin<br><span class="specialty">Généraliste</span><br><span class="phone">01 23 45 67 90</span></td>
-                  <td>10h-13h</td>
-                  <td>9h-12h</td>
-                  <td>14h-17h</td>
-                  <td>9h-12h</td>
-                  <td>14h-17h</td>
-                  <td>9h-12h</td>
-              </tr>
-              <!-- Ligne 3 -->
-              <tr>
-                  <td class="doctor-info">Dr. Lefebvre<br><span class="specialty">Dermatologue</span><br><span class="phone">01 23 45 67 91</span></td>
-                  <td>9h-12h</td>
-                  <td>10h-13h</td>
-                  <td>14h-17h</td>
-                  <td>10h-13h</td>
-                  <td>9h-12h</td>
-                  <td>14h-17h</td>
-              </tr>
-              <!-- Ligne 4 -->
-              <tr>
-                  <td class="doctor-info">Dr. Dubois<br><span class="specialty">Ostéopathe</span><br><span class="phone">01 23 45 67 92</span></td>
-                  <td>14h-17h</td>
-                  <td>9h-12h</td>
-                  <td>10h-13h</td>
-                  <td>14h-17h</td>
-                  <td>9h-12h</td>
-                  <td>10h-13h</td>
-              </tr>
-              <!-- Ligne 5 -->
-              <tr>
-                  <td class="doctor-info">Dr. Girard<br><span class="specialty">Ophtalmologue</span><br><span class="phone">01 23 45 67 93</span></td>
-                  <td>10h-13h</td>
-                  <td>14h-17h</td>
-                  <td>9h-12h</td>
-                  <td>14h-17h</td>
-                  <td>10h-13h</td>
-                  <td>14h-17h</td>
-              </tr>
-              <!-- Ligne 6 -->
-              <tr>
-                  <td class="doctor-info">Dr. Lambert<br><span class="specialty">Rhumatologue</span><br><span class="phone">01 23 45 67 94</span></td>
-                  <td>9h-12h</td>
-                  <td>10h-13h</td>
-                  <td>14h-17h</td>
-                  <td>9h-12h</td>
-                  <td>14h-17h</td>
-                  <td>11h-14h</td>
-              </tr>
-              <!-- Ligne 7 -->
-              <tr>
-                  <td class="doctor-info">Dr. Moreau<br><span class="specialty">Endocrinologue</span><br><span class="phone">01 23 45 67 95</span></td>
-                  <td>14h-17h</td>
-                  <td>9h-12h</td>
-                  <td>10h-13h</td>
-                  <td>14h-17h</td>
-                  <td>9h-12h</td>
-                  <td>14h-17h</td>
-              </tr>
-              <!-- Ligne 8 -->
-              <tr>
-                  <td class="doctor-info">Dr. Carpentier<br><span class="specialty">Pédiatre</span><br><span class="phone">01 23 45 67 96</span></td>
-                  <td>10h-13h</td>
-                  <td>14h-17h</td>
-                  <td>9h-12h</td>
-                  <td>10h-13h</td>
-                  <td>14h-17h</td>
-                  <td>9h-12h</td>
-              </tr>
-              <!-- Ligne 9 -->
-              <tr>
-                  <td class="doctor-info">Dr. Petit<br><span class="specialty">Neurologue</span><br><span class="phone">01 23 45 67 97</span></td>
-                  <td>9h-12h</td>
-                  <td>14h-17h</td>
-                  <td>10h-13h</td>
-                  <td>14h-17h</td>
-                  <td>10h-13h</td>
-                  <td>14h-17h</td>
-              </tr>
-          </tbody>
-      </table>
-  </div>
+ 
   
 
 
   <div class="card-container d-block d-md-none">
     <!-- Ligne 1 -->
     <div class="card">
-        <div class="card-header">Dr. Dupont<br><span class="specialty">Cardiologue</span><br><span class="phone">01 23 45 67 89</span></div>
+        <div class="card-header">
+            Dr. Dupont<br><span class="specialty">Cardiologue</span><br><span class="phone">01 23 45 67 89</span>
+        </div>
         <div class="card-body">
             <div class="row">
                 <div class="col"><strong>Lundi</strong></div>
@@ -446,12 +473,15 @@
                 <div class="col"><strong>Samedi</strong></div>
                 <div class="col">11h-14h</div>
             </div>
+            <a href="#" class="btn">Prendre un Rendez-vous</a>
         </div>
     </div>
     <!-- Répétez le bloc ci-dessus pour chaque médecin avec les horaires correspondants -->
     <!-- Exemple pour Dr. Martin -->
     <div class="card">
-        <div class="card-header">Dr. Martin<br><span class="specialty">Généraliste</span><br><span class="phone">01 23 45 67 90</span></div>
+        <div class="card-header">
+            Dr. Martin<br><span class="specialty">Généraliste</span><br><span class="phone">01 23 45 67 90</span>
+        </div>
         <div class="card-body">
             <div class="row">
                 <div class="col"><strong>Lundi</strong></div>
@@ -477,12 +507,12 @@
                 <div class="col"><strong>Samedi</strong></div>
                 <div class="col">9h-12h</div>
             </div>
+            <a href="#" class="btn">Prendre un Rendez-vous</a>
         </div>
     </div>
     <!-- Répétez pour les autres médecins -->
 </div>
 </div>
-
 
 
 
