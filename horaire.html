@@ -21,9 +21,44 @@
     <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
     <link href="assets/css/horaire.css" rel="stylesheet">
   <style>
+
+
+
+
     .card {
       margin-bottom: 1rem;
     }
+
+    .card-body {
+    display: flex;
+    flex-direction: column;
+  }
+  
+
+  .button-group {
+    display: flex;
+    gap: 0.5rem;
+    margin-top: 34px;
+  }
+
+  .button-group .btn {
+    flex: 1;
+  }
+
+  /* Ajouter margin-top spécifiquement pour chaque bouton */
+  .button-group .btn-warning {
+    margin-top: 34px; /* Ajustez la valeur selon les besoins */
+  }
+
+  .button-group .btn-danger {
+    margin-top: 34px; /* Ajustez la valeur selon les besoins */
+  }
+
+  .button-group .btn-success {
+    margin-top: 34px; /* Ajustez la valeur selon les besoins */
+  }
+  
+ 
     @media (max-width: 768px) {
       .form-inline {
         display: flex;
@@ -159,10 +194,17 @@
           <option value="">Sélectionner un service</option>
         </select>
       </div>
+
+      <div class="col-md-4">
+        <h2>Sélectionner le Docteur</h2>
+        <select class="form-select" id="doctorSelect">
+          <option value="">Sélectionner un docteur</option>
+        </select>
+      </div>
     </div>
     <div class="row mt-4">
       <div class="col-md-12">
-        <h2>Ajouter ou Modifier les Horaires</h2>
+      
         <form id="scheduleForm" onsubmit="saveSchedule(event)" class="form-inline">
           <input type="hidden" id="scheduleId">
           <div class="mb-3">
