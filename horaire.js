@@ -51,7 +51,6 @@ const doctors = {
     'Échographie': ['Dr GGG', 'Dr HHH']
   }
 };
-
 const branchSelect = document.getElementById('branchSelect');
 const serviceSelect = document.getElementById('serviceSelect');
 const doctorSelect = document.getElementById('doctorSelect');
@@ -115,6 +114,14 @@ function saveSchedule(event) {
   const scheduleId = document.getElementById('scheduleId').value;
 
   if (selectedService && date && time) {
+    const schedule = {
+      branch: selectedBranch,
+      service: selectedService,
+      doctor: selectedDoctor,
+      date: date,
+      time: time
+    };
+
     if (scheduleId) {
       // Update existing schedule
       const scheduleItem = document.getElementById(scheduleId);
@@ -124,6 +131,7 @@ function saveSchedule(event) {
         <button onclick="deleteSchedule('${scheduleId}')" class="btn btn-danger btn-sm mt-2">Supprimer</button>
         <button onclick="publishSchedule('${scheduleId}')" class="btn btn-success btn-sm mt-2">Publier</button>
       `;
+      updateLocalStorage(scheduleId, schedule);
     } else {
       // Create new schedule
       const newScheduleId = Date.now().toString();
@@ -141,6 +149,7 @@ function saveSchedule(event) {
         </div>
       `;
       scheduleList.appendChild(scheduleItem);
+      saveToLocalStorage(newScheduleId, schedule);
     }
     resetForm();
   } 
@@ -167,6 +176,7 @@ function editSchedule(scheduleId) {
 function deleteSchedule(scheduleId) {
   const scheduleItem = document.getElementById(scheduleId);
   scheduleItem.remove();
+  removeFromLocalStorage(scheduleId);
   resetForm();
 }
 
@@ -184,9 +194,50 @@ function resetForm() {
   updateDoctors();
 }
 
+// Local storage functions
+function saveToLocalStorage(id, schedule) {
+  const schedules = JSON.parse(localStorage.getItem('schedules')) || {};
+  schedules[id] = schedule;
+  localStorage.setItem('schedules', JSON.stringify(schedules));
+}
+
+function updateLocalStorage(id, schedule) {
+  const schedules = JSON.parse(localStorage.getItem('schedules')) || {};
+  schedules[id] = schedule;
+  localStorage.setItem('schedules', JSON.stringify(schedules));
+}
+
+function removeFromLocalStorage(id) {
+  const schedules = JSON.parse(localStorage.getItem('schedules')) || {};
+  delete schedules[id];
+  localStorage.setItem('schedules', JSON.stringify(schedules));
+}
+
+function loadSchedulesFromLocalStorage() {
+  const schedules = JSON.parse(localStorage.getItem('schedules')) || {};
+  Object.keys(schedules).forEach(scheduleId => {
+    const schedule = schedules[scheduleId];
+    const scheduleItem = document.createElement('div');
+    scheduleItem.className = 'col-md-4';
+    scheduleItem.id = scheduleId;
+    scheduleItem.innerHTML = `
+      <div class="card">
+        <div class="card-body">
+          ${schedule.branch} - ${schedule.service} - ${schedule.doctor} : ${schedule.date} à ${schedule.time}
+          <button onclick="editSchedule('${scheduleId}')" class="btn btn-warning btn-sm mt-2">Modifier</button>
+          <button onclick="deleteSchedule('${scheduleId}')" class="btn btn-danger btn-sm mt-2">Supprimer</button>
+          <button onclick="publishSchedule('${scheduleId}')" class="btn btn-success btn-sm mt-2">Publier</button>
+        </div>
+      </div>
+    `;
+    scheduleList.appendChild(scheduleItem);
+  });
+}
+
 // Event listeners
 document.addEventListener('DOMContentLoaded', () => {
   updateServices(); // Populate services for initial branch
+  loadSchedulesFromLocalStorage(); // Load schedules from local storage
 });
 
 branchSelect.addEventListener('change', () => {
