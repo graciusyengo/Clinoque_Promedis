@@ -40,6 +40,8 @@ emailjs.init({
 })();
 
 </script>
+
+
   
   <style>
    
@@ -220,12 +222,13 @@ emailjs.init({
 
   <div style="margin-top: 200px;">
     <div class="header">
-        <h1>Horaires de Rendez-vous</h1>
+        <h1>Horaires de Rendez-vous </h1>
       </div>
     
       <div class="container">
         <div class="row" id="scheduleList">
           <!-- Les cartes d'horaires seront ajoutées ici -->
+      
         </div>
       </div>
   </div>
@@ -310,39 +313,75 @@ emailjs.init({
         </div>
       </footer><!-- End Footer -->
 
-  <script>
-    const schedules = [
-      { date: '2024-08-01', time: '09:00', doctor: 'Dr. Dupont', branch: 'Limete', service: 'Pédiatrie' },
-      { date: '2024-08-02', time: '10:00', doctor: 'Dr. Martin', branch: 'Gombe', service: 'Dentisterie' },
-      { date: '2024-08-03', time: '11:00', doctor: 'Dr. Lemoine', branch: 'Matete', service: 'Orthopédie' },
-      // Ajoutez plus d'horaires ici
-    ];
 
-    const scheduleList = document.getElementById('scheduleList');
 
-    schedules.forEach(schedule => {
-      const card = document.createElement('div');
-      card.className = 'col-md-4 mb-4';
-      card.innerHTML = `
-        <div class="card">
-          <div class="card-header">
-            ${schedule.branch}
-          </div>
-          <div class="card-body text-center">
-            <i class="fas fa-user-md icon"></i>
-            <h5 class="card-title mt-2">${schedule.doctor}</h5>
-            <p class="card-text"><strong>Date:</strong> ${schedule.date}</p>
-            <p class="card-text"><strong>Heure:</strong> ${schedule.time}</p>
-            <p class="card-text"><strong>Service:</strong> ${schedule.service}</p>
-          </div>
-          <div class="card-footer">
-            <small>Clinique Promedis</small>
-          </div>
-        </div>
-      `;
-      scheduleList.appendChild(card);
-    });
-  </script>
+      <script type="module">
+        import client from './sanity.config.js';
+    
+        async function fetchBranch() {
+          const query = `*[_type == "branch"] {
+            name,
+            "services": services[]->{
+              name,
+              "doctors": doctors[]->{
+                name,
+                availableAppointments
+              }
+            }
+          }`; // Ajustez la requête selon votre schéma
+    
+          const branches = await client.fetch(query);
+          console.log(branches);
+          return branches;
+        }
+    
+        function displayBranches(branches) {
+          const scheduleList = document.getElementById('scheduleList');
+    
+          branches.forEach(branch => {
+            const card = document.createElement('div');
+            card.className = 'col-md-4 mb-4';
+            card.innerHTML = `
+              <div class="card">
+                <div class="card-header">
+                  ${branch.name}
+                </div>
+                <div class="card-body text-center">
+                  <i class="fas fa-user-md icon"></i>
+                  <h5 class="card-title mt-2">${branch.name}</h5>
+                  ${branch.services.map(service => `
+                    <p class="card-text"><strong>Service:</strong> ${service.name}</p>
+                    ${service.doctors.map(doctor => `
+                      <p class="card-text"><strong>Doctor:</strong> ${doctor.name}</p>
+                      ${doctor.availableAppointments.map(appointment => `
+                        <p class="card-text"><strong>Date:</strong> ${new Date(appointment.date).toLocaleDateString()}</p>
+                        <p class="card-text"><strong>Time:</strong> ${new Date(appointment.time).toLocaleTimeString()}</p>
+                      `).join('')}
+                    `).join('')}
+                  `).join('')}
+                </div>
+                <div class="card-footer">
+                  <small>Clinique Promedis</small>
+                </div>
+              </div>
+            `;
+            scheduleList.appendChild(card);
+          });
+        }
+    
+        fetchBranch().then(displayBranches).catch(err => {
+          console.error('Error fetching branches:', err);
+        });
+      </script>
+
+ 
+  
+ 
+
+
+
+
+
 </body>
 </html>
 
