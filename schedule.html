@@ -103,6 +103,12 @@ emailjs.init({
       margin: 10px 0;
     }
 
+    .card-text strong {
+      color: #5FA599;
+      font-size: 1.1rem; /* Augmente la taille de la police */
+      font-weight: bold; /* Rend le texte plus gras */
+    }
+
     .fab {
       margin-right: 10px;
     }
@@ -222,7 +228,7 @@ emailjs.init({
 
   <div style="margin-top: 200px;">
     <div class="header">
-        <h1>Horaires de Rendez-vous </h1>
+        <h1>Horaires Mensuels </h1>
       </div>
     
       <div class="container">
@@ -313,71 +319,108 @@ emailjs.init({
         </div>
       </footer><!-- End Footer -->
 
-
-
-      <script type="module">
-        import client from './sanity.config.js';
-    
-        async function fetchBranch() {
-          const query = `*[_type == "branch"] {
-            name,
-            "services": services[]->{
+     
+      
+        <div class="container">
+          <div id="scheduleList" class="row"></div>
+        </div>
+      
+        <script type="module">
+          import client from './sanity.config.js';
+      
+          async function fetchBranch() {
+            const query = `*[_type == "branch"] {
               name,
-              "doctors": doctors[]->{
+              "services": services[]->{
                 name,
-                availableAppointments
+                availableAppointments,
+                "doctors": doctors[]->{
+                  name,
+                  availableAppointments
+                }
               }
-            }
-          }`; // Ajustez la requête selon votre schéma
-    
-          const branches = await client.fetch(query);
-          console.log(branches);
-          return branches;
-        }
-    
-        function displayBranches(branches) {
-          const scheduleList = document.getElementById('scheduleList');
-    
-          branches.forEach(branch => {
-            const card = document.createElement('div');
-            card.className = 'col-md-4 mb-4';
-            card.innerHTML = `
-              <div class="card">
-                <div class="card-header">
-                  ${branch.name}
+            }`;
+      
+            const branches = await client.fetch(query);
+            console.log(branches); // Vérifiez que les données sont bien récupérées
+            return branches;
+          }
+      
+          function formatTime(timeStr) {
+            const timeObj = new Date(timeStr);
+            return !isNaN(timeObj) ? timeObj.toLocaleTimeString() : 'Invalid Time';
+          }
+      
+          function formatDate(dateStr) {
+            const dateObj = new Date(dateStr);
+            const day = !isNaN(dateObj) ? dateObj.toLocaleDateString(undefined, { weekday: 'long' }) : 'Invalid Date';
+            const dateFormatted = !isNaN(dateObj) ? dateObj.toLocaleDateString() : 'Invalid Date';
+            return { dateFormatted, day };
+          }
+      
+          function displayBranches(branches) {
+            const scheduleList = document.getElementById('scheduleList');
+            scheduleList.innerHTML = ''; // Clear existing content
+      
+            branches.forEach(branch => {
+              const card = document.createElement('div');
+              card.className = 'col-md-4 mb-4';
+              card.innerHTML = `
+                <div class="card">
+                  <div class="card-header">
+                    ${branch.name || ''}
+                  </div>
+                  <div class="card-body text-center">
+                    <i class="fas fa-user-md icon"></i>
+                    <h5 class="card-title mt-2">${branch.name || ''}</h5>
+                    ${branch.services?.map(service => `
+                      <p class="card-text"><strong style:"yellow">Service:</strong> ${service.name || ''}</p>
+                      ${service.availableAppointments?.map(appointment => {
+                        const { dateFormatted, day } = formatDate(appointment.date);
+                        const startTimeFormatted = formatTime(appointment.startTime);
+                        const endTimeFormatted = formatTime(appointment.endTime);
+      
+                        return `
+                          <p class="card-text"><strong>Date:</strong> ${dateFormatted} (${day})</p>
+                          <p class="card-text"><strong>Time:</strong> ${startTimeFormatted} - ${endTimeFormatted}</p>
+                        `;
+                      }).join('') || ''}
+                      ${service.doctors?.map(doctor => `
+                        <p class="card-text"><strong>Doctor:</strong> ${doctor.name || ''}</p>
+                        ${doctor.availableAppointments?.map(appointment => {
+                          const { dateFormatted, day } = formatDate(appointment.date);
+                          const startTimeFormatted = formatTime(appointment.startTime);
+                          const endTimeFormatted = formatTime(appointment.endTime);
+      
+                          return `
+                            <p class="card-text"><strong>Date:</strong> ${dateFormatted} (${day})</p>
+                            <p class="card-text"><strong>Time:</strong> ${startTimeFormatted} - ${endTimeFormatted}</p>
+                          `;
+                        }).join('') || ''}
+                      `).join('') || ''}
+                    `).join('') || ''}
+                  </div>
+                  <div class="card-footer">
+                    <small>Clinique Promedis</small>
+                  </div>
                 </div>
-                <div class="card-body text-center">
-                  <i class="fas fa-user-md icon"></i>
-                  <h5 class="card-title mt-2">${branch.name}</h5>
-                  ${branch.services.map(service => `
-                    <p class="card-text"><strong>Service:</strong> ${service.name}</p>
-                    ${service.doctors.map(doctor => `
-                      <p class="card-text"><strong>Doctor:</strong> ${doctor.name}</p>
-                      ${doctor.availableAppointments.map(appointment => `
-                        <p class="card-text"><strong>Date:</strong> ${new Date(appointment.date).toLocaleDateString()}</p>
-                        <p class="card-text"><strong>Time:</strong> ${new Date(appointment.time).toLocaleTimeString()}</p>
-                      `).join('')}
-                    `).join('')}
-                  `).join('')}
-                </div>
-                <div class="card-footer">
-                  <small>Clinique Promedis</small>
-                </div>
-              </div>
-            `;
-            scheduleList.appendChild(card);
-          });
-        }
-    
-        fetchBranch().then(displayBranches).catch(err => {
-          console.error('Error fetching branches:', err);
-        });
-      </script>
+              `;
+              scheduleList.appendChild(card);
+            });
+          }
+      
+          fetchBranch()
+            .then(displayBranches)
+            .catch(err => {
+              console.error('Error fetching branches:', err);
+            });
+        </script>
+      
+      
+      
+      
 
- 
-  
- 
-
+      
 
 
 
