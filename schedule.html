@@ -232,8 +232,14 @@ emailjs.init({
       </div>
     
       <div class="container">
+              <div class="container">
+    <input type="text" id="serviceSearch" placeholder="Rechercher par service..." class="form-control mb-4">
+    <div id="scheduleList" class="row"></div>
+  </div>
         <div class="row" id="scheduleList">
           <!-- Les cartes d'horaires seront ajoutées ici -->
+
+     
       
         </div>
       </div>
@@ -321,110 +327,118 @@ emailjs.init({
 
      
       
-        <div class="container">
-          <div id="scheduleList" class="row"></div>
-        </div>
-      
-        <script type="module">
-          import client from './sanity.config.js';
-      
-          async function fetchBranch() {
-            const query = `*[_type == "branch"] {
-              name,
-              "services": services[]->{
-                name,
-                availableAppointments,
-                "doctors": doctors[]->{
-                  name,
-                  availableAppointments
-                }
-              }
-            }`;
-      
-            const branches = await client.fetch(query);
-            console.log(branches); // Vérifiez que les données sont bien récupérées
-            return branches;
+       
+        
+    
+
+  <script type="module">
+    import client from './sanity.config.js';
+
+    async function fetchBranch() {
+      const query = `*[_type == "branch"] {
+        name,
+        "services": services[]->{
+          name,
+          availableAppointments,
+          "doctors": doctors[]->{
+            name,
+            availableAppointments
           }
-      
-          function formatTime(timeStr) {
-            const timeObj = new Date(timeStr);
-            return !isNaN(timeObj) ? timeObj.toLocaleTimeString() : 'Invalid Time';
-          }
-      
-          function formatDate(dateStr) {
-            const dateObj = new Date(dateStr);
-            const day = !isNaN(dateObj) ? dateObj.toLocaleDateString(undefined, { weekday: 'long' }) : 'Invalid Date';
-            const dateFormatted = !isNaN(dateObj) ? dateObj.toLocaleDateString() : 'Invalid Date';
-            return { dateFormatted, day };
-          }
-      
-          function displayBranches(branches) {
-            const scheduleList = document.getElementById('scheduleList');
-            scheduleList.innerHTML = ''; // Clear existing content
-      
-            branches.forEach(branch => {
-              const card = document.createElement('div');
-              card.className = 'col-md-4 mb-4';
-              card.innerHTML = `
-                <div class="card">
-                  <div class="card-header">
-                    ${branch.name || ''}
-                  </div>
-                  <div class="card-body text-center">
-                    <i class="fas fa-user-md icon"></i>
-                    <h5 class="card-title mt-2">${branch.name || ''}</h5>
-                    ${branch.services?.map(service => `
-                      <p class="card-text"><strong style:"yellow">Service:</strong> ${service.name || ''}</p>
-                      ${service.availableAppointments?.map(appointment => {
-                        const { dateFormatted, day } = formatDate(appointment.date);
-                        const startTimeFormatted = formatTime(appointment.startTime);
-                        const endTimeFormatted = formatTime(appointment.endTime);
-      
-                        return `
-                          <p class="card-text"><strong>Date:</strong> ${dateFormatted} (${day})</p>
-                          <p class="card-text"><strong>Time:</strong> ${startTimeFormatted} - ${endTimeFormatted}</p>
-                        `;
-                      }).join('') || ''}
-                      ${service.doctors?.map(doctor => `
-                        <p class="card-text"><strong>Doctor:</strong> ${doctor.name || ''}</p>
-                        ${doctor.availableAppointments?.map(appointment => {
-                          const { dateFormatted, day } = formatDate(appointment.date);
-                          const startTimeFormatted = formatTime(appointment.startTime);
-                          const endTimeFormatted = formatTime(appointment.endTime);
-      
-                          return `
-                            <p class="card-text"><strong>Date:</strong> ${dateFormatted} (${day})</p>
-                            <p class="card-text"><strong>Time:</strong> ${startTimeFormatted} - ${endTimeFormatted}</p>
-                          `;
-                        }).join('') || ''}
-                      `).join('') || ''}
-                    `).join('') || ''}
-                  </div>
-                  <div class="card-footer">
-                    <small>Clinique Promedis</small>
-                  </div>
+        }
+      }`;
+
+      const branches = await client.fetch(query);
+      console.log(branches); // Vérifiez que les données sont bien récupérées
+      return branches;
+    }
+
+    function formatTime(timeStr) {
+      const timeObj = new Date(timeStr);
+      return !isNaN(timeObj) ? timeObj.toLocaleTimeString() : 'Invalid Time';
+    }
+
+    function formatDate(dateStr) {
+      const dateObj = new Date(dateStr);
+      const day = !isNaN(dateObj) ? dateObj.toLocaleDateString(undefined, { weekday: 'long' }) : 'Invalid Date';
+      const dateFormatted = !isNaN(dateObj) ? dateObj.toLocaleDateString() : 'Invalid Date';
+      return { dateFormatted, day };
+    }
+
+    function displayBranches(branches, searchTerm = '') {
+      const scheduleList = document.getElementById('scheduleList');
+      scheduleList.innerHTML = ''; // Clear existing content
+
+      branches.forEach(branch => {
+        branch.services?.forEach(service => {
+          if (service.name.toLowerCase().includes(searchTerm.toLowerCase())) {
+            const card = document.createElement('div');
+            card.className = 'col-md-4 mb-4';
+            card.innerHTML = `
+              <div class="card">
+                <div class="card-header">
+                  ${branch.name || ''} - ${service.name || ''}
                 </div>
-              `;
-              scheduleList.appendChild(card);
-            });
+                <div class="card-body text-center">
+                  <i class="fas fa-user-md icon"></i>
+                  <h5 class="card-title mt-2">${service.name || ''}</h5>
+                  ${service.availableAppointments?.map(appointment => {
+                    const { dateFormatted, day } = formatDate(appointment.date);
+                    const startTimeFormatted = formatTime(appointment.startTime);
+                    const endTimeFormatted = formatTime(appointment.endTime);
+
+                    return `
+                      <p class="card-text"><strong>Date:</strong> ${dateFormatted} (${day})</p>
+                      <p class="card-text"><strong>Time:</strong> ${startTimeFormatted} - ${endTimeFormatted}</p>
+                    `;
+                  }).join('') || ''}
+                  ${service.doctors?.map(doctor => `
+                    <p class="card-text"><strong>Doctor:</strong> ${doctor.name || ''}</p>
+                    ${doctor.availableAppointments?.map(appointment => {
+                      const { dateFormatted, day } = formatDate(appointment.date);
+                      const startTimeFormatted = formatTime(appointment.startTime);
+                      const endTimeFormatted = formatTime(appointment.endTime);
+
+                      return `
+                        <p class="card-text"><strong>Date:</strong> ${dateFormatted} (${day})</p>
+                        <p class="card-text"><strong>Time:</strong> ${startTimeFormatted} - ${endTimeFormatted}</p>
+                      `;
+                    }).join('') || ''}
+                  `).join('') || ''}
+                </div>
+                <div class="card-footer">
+                  <small>Clinique Promedis</small>
+                </div>
+              </div>
+            `;
+            scheduleList.appendChild(card);
           }
-      
-          fetchBranch()
-            .then(displayBranches)
-            .catch(err => {
-              console.error('Error fetching branches:', err);
-            });
-        </script>
+        });
+      });
+    }
+
+    document.getElementById('serviceSearch').addEventListener('input', function(event) {
+      const searchTerm = event.target.value;
+      fetchBranch()
+        .then(branches => displayBranches(branches, searchTerm))
+        .catch(err => {
+          console.error('Error fetching branches:', err);
+        });
+    });
+
+    // Fetch and display all branches on initial load
+    fetchBranch()
+      .then(branches => displayBranches(branches))
+      .catch(err => {
+        console.error('Error fetching branches:', err);
+      });
+  </script>
+
       
       
       
       
 
-      
-
-
-
-
+  
 </body>
 </html>
 
