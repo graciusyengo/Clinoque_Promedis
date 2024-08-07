@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CPN et CPS - Cliniques Promedis</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <link href="assets/img/favicon.png" rel="icon">
+    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+        rel="stylesheet">
+
+    <!-- Vendor CSS Files -->
+    <link href="assets/vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
+    <link href="assets/vendor/animate.css/animate.min.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+    <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+    <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+    <link href="assets/css/cpn-cps.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+        .container {
+            padding: 20px;
+            border-radius: 8px;
+                  }
+
+                  .mtt{
+                    margin-top: 70px;
+                    margin-left: 80px;
+                  }
+
+          
+                
+        h1, h2 {
+            color: #5FA599;
+        }
+        h3, h4 {
+            color: #343a40;
+        }
+        ul {
+            list-style-type: disc;
+            margin-left: 20px;
+        }
+        footer {
+            margin-top: 50px;
+        }
+
+        @media (max-width:500px){
+            .mtt{
+                    margin-top: 40px;
+                    margin-left: 30px;
+                  }
+
+        }
+    </style>
+
+
+
+
+
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+</script>
+
+<script type="text/javascript">
+    (function () {
+        emailjs.init({
+            publicKey: "UZF1ohsXpSwqR_Nyk",
+        });
+    })();
+</script>
+</head>
+<body>
+
+
+
+
+
+
+
+    <div id="topbar" class="d-flex align-items-center fixed-top">
+        <div class="container d-flex justify-content-between">
+            <div class="contact-info d-flex align-items-center">
+                <i class="bi bi-envelope"></i> <a href="mailto:contact@example.com">cliniquepromedis@gmail.com</a>
+                <i class="bi bi-phone"></i> + 24389980029
+            </div>
+            <div class="d-none d-lg-flex social-links align-items-center">
+                <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
+                <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
+                <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
+                <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></i></a>
+            </div>
+        </div>
+    </div> 
+
+
+           <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top">
+    <div class="container d-flex align-items-center">
+
+
+      <!-- Uncomment below if you prefer to use an image logo -->
+      <a href="index.html" class="logo me-auto"><img src="assets/img/logo.jpeg" alt="" class="img-fluid"></a>
+
+      <nav id="navbar" class="navbar order-last order-lg-0">
+        <ul>
+          <li><a class="nav-link scrollto active" href="/">Accueil</a></li>
+          <li><a class="nav-link scrollto" href="./about.html">A propos</a></li>
+          <li><a class="nav-link scrollto" href="./succursales.html">Succursales</a></li>
+          <li><a class="nav-linkPage scrollto" href="./schedule.html">Horaire mensuel</a></li>
+          <li><a class="nav-link scrollto" href="./index.html#departments">Departements</a> </i></li>
+          <li><a class="nav-link scrollto" href="./index.html#doctors">Medecins</a></li>
+          <li class="dropdown"><a href=" ./index.html#services"><span>Services</span> <i class="bi bi-chevron-down"></i></a>
+
+            <ul>
+              <li>
+                <a href="./generalConsultaion.html">Consultation Generale  24/24</a>
+              </li>
+              <li>
+                <a href="./specialConsultation.html">Consultations spécialisés </a>
+              </li>
+              <li>
+              <a href="Pediatrie.html">
+              Pédiatrie 
+              </a>
+              </li>
+              
+              <li>
+              <a href="./gynecologie.html">
+                Gynecologie
+              </a>
+              </li>
+            
+              <li>
+                <a href="/internalMedecine">Médecine Interne  </a>
+              </li>
+              <li>
+                <a href="/ophtamologie">Ophtamologie </a>
+              </li>
+              <li>
+                <a href="/dermatologie">Dérmatologie </a>
+              </li>
+              <li>
+                <a href="/orthopedie">Orthopédie </a>
+              </li>
+              <li>
+                <a href="#">Neuropychiatrie </a>
+              </li>
+              <li>
+                <a href="#">ORL </a>
+              </li>
+              <li>
+                <a href="#">Dentisterie </a>
+              </li>
+              <li>
+                <a href="#">Urologie </a>
+              </li>
+              <li>
+                <a href="#">Cardiologie </a>
+              </li>
+              <li>
+                <a href="#">CPN CPS </a>
+              </li>
+            </ul>
+          </li>
+          <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+     
+      </nav><!-- .navbar -->
+
+      <div class="btn-contact">
+
+      <a href="#appointment" class="appointment-btn scrollto"><span class="d-none d-md-inline"></span> Prenez un
+        rendez-vous
+
+        
+      </a>
+      <div class="iconWhatsapp" onclick="whatsappRedirect()"> <i class='fab fa-whatsapp-square'></i>
+      </div>
+    </div>
+   
+
+    </div>
+  </header><!-- End Header -->
+
+
+
+
+
+  <section id="hero" class="d-flex align-items-center" >
+    <div class="container">
+        <h1>MEDECINE INTERNE </h1>
+    </div>
+</section> 
+
+
+<section id="heroGeneralConsultation" class="d-flex align-items-center" >
+    <div class="container d-flex align-items-center justify-content-center">
+
+        <div class="d-flex flex-column mr">
+            <span class="hours"> heure service</span>
+            <span class="time"> 24h/24</span>
+        </div>
+
+        <div class="d-flex flex-column mr">
+            <span class="price">prix</span>
+            <span class="text"> Gratuit</span>
+        </div>
+
+       
+
+        <div class="btn-contact">
+            <a href="index.html#appointment" class="appointment-btn scrollto"><span class="d-none d-md-inline"></span> Prenez
+                un
+                rendez-vous
+            </a>
+            <div class="iconWhatsapp" onclick="whatsappRedirect()"> <i class='fab fa-whatsapp-square'></i>
+            </div>
+        </div> 
+    </div>
+</section> 
+
+
+
+
+
+
+<div class="container mt-5">
+    
+    <!-- Clinique Promedis Limete -->
+    <section class="mtt">
+      <h2>Clinique Promedis Limete <span>(adresse)</span></h2>
+      <h3>Pédiatrie</h3>
+      <p>Nos services de pédiatrie à Limete offrent des soins complets pour les enfants de tous âges. Nos prestations incluent :</p>
+      <ul>
+        <li>Consultations de routine pour enfants</li>
+        <li>Vaccinations et suivi des immunisations</li>
+        <li>Évaluation et traitement des maladies infantiles</li>
+        <li>Conseils sur la nutrition et le développement</li>
+      </ul>
+      <h4>Horaires de Rendez-vous</h4>
+      <p>Lundi - Vendredi : 8h00 - 18h00<br>Samedi : 8h00 - 12h00</p>
+    </section>
+
+    <!-- Clinique Promedis Gombe -->
+    <section class="mtt">
+      <h2>Clinique Promedis Gombe <span>(adresse)</span></h2>
+      <h3>Pédiatrie</h3>
+      <p>À la Clinique Promedis Gombe, nous offrons des soins pédiatriques de qualité pour le bien-être des enfants. Nos services incluent :</p>
+      <ul>
+        <li>Consultations médicales pour enfants</li>
+        <li>Suivi de croissance et développement</li>
+        <li>Traitement des maladies infantiles</li>
+        <li>Conseils en nutrition et hygiène</li>
+      </ul>
+      <h4>Horaires de Rendez-vous</h4>
+      <p>Lundi - Vendredi : 9h00 - 17h00<br>Samedi : 9h00 - 13h00</p>
+    </section>
+
+    <!-- Clinique Promedis Matete -->
+    <section class="mtt">
+      <h2>Clinique Promedis Matete <span>(adresse)</span></h2>
+      <h3>Pédiatrie</h3>
+      <p>Nos services de pédiatrie à Matete sont conçus pour offrir des soins complets et spécialisés aux enfants. Nos prestations incluent :</p>
+      <ul>
+        <li>Consultations pédiatriques régulières</li>
+        <li>Vaccinations et suivi</li>
+        <li>Soins pour les maladies infantiles courantes</li>
+        <li>Conseils en nutrition et développement</li>
+      </ul>
+      <h4>Horaires de Rendez-vous</h4>
+      <p>Lundi - Vendredi : 8h30 - 17h30<br>Samedi : 8h30 - 12h30</p>
+    </section>
+
+    <!-- Clinique Promedis Kinkole -->
+    <section class="mtt">
+      <h2>Clinique Promedis Kinkole <span>(adresse)</span></h2>
+      <h3>Pédiatrie</h3>
+      <p>À Kinkole, nous offrons des services de pédiatrie pour assurer la santé et le bien-être des enfants. Nos services incluent :</p>
+      <ul>
+        <li>Consultations pédiatriques</li>
+        <li>Vaccinations et immunisations</li>
+        <li>Traitement des maladies infantiles</li>
+        <li>Conseils en développement et nutrition</li>
+      </ul>
+      <h4>Horaires de Rendez-vous</h4>
+      <p>Lundi - Vendredi : 8h00 - 18h00<br>Samedi : 8h00 - 14h00</p>
+    </section>
+
+    <!-- Clinique Promedis VIP -->
+    <section class="mtt">
+      <h2>Clinique Promedis VIP <span>(adresse)</span></h2>
+      <h3>Pédiatrie</h3>
+      <p>Notre clinique VIP offre des services pédiatriques personnalisés pour un suivi de haute qualité. Nos prestations incluent :</p>
+      <ul>
+        <li>Consultations pédiatriques privées</li>
+        <li>Vaccinations et suivi personnalisé</li>
+        <li>Soins pour maladies infantiles complexes</li>
+        <li>Support et conseils 24/7</li>
+      </ul>
+      <h4>Horaires de Rendez-vous</h4>
+      <p>Lundi - Vendredi : 9h00 - 19h00<br>Samedi : 9h00 - 15h00</p>
+    </section>
+
+    <!-- Clinique Promedis Ngaliema -->
+    <section class="mtt">
+      <h2>Clinique Promedis Ngaliema <span>(adresse)</span></h2>
+      <h3>Pédiatrie</h3>
+      <p>Nos services de pédiatrie à Ngaliema sont conçus pour offrir des soins complets aux enfants de tous âges. Nos prestations incluent :</p>
+      <ul>
+        <li>Consultations pédiatriques</li>
+        <li>Suivi des vaccinations</li>
+        <li>Traitement des maladies infantiles</li>
+        <li>Conseils en nutrition et développement</li>
+      </ul>
+      <h4>Horaires de Rendez-vous</h4>
+      <p>Lundi - Vendredi : 8h30 - 17h30<br>Samedi : 8h30 - 12h30</p>
+    </section>
+
+  </div>
+
+
+    <footer id="footer" >
+
+        <div class="footer-top">
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-lg-3 col-md-6 footer-contact">
+                        <h3>Clinique Promedis</h3>
+                        <p>
+                            N 23/C Industriel <br>
+                            10 ème Rue Limete Industriel<br>
+                            <br><br>
+                            <strong>Phone:</strong> + 2433385771<br>
+                            <strong>Email:</strong> cliniquepromedis@gmail.com<br>
+                            <strong>Plein temps:</strong> 24h/24<br>
+                        </p>
+                    </div>
+
+                    <div class="col-lg-2 col-md-6 footer-links">
+                        <h4>A propos</h4>
+                        <ul>
+                            <li> <a href="#">A propos </a></li>
+                            <li><a href="#">Nos Surcursales</a></li>
+
+                        </ul>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6 footer-links">
+                        <h4>Nos Services</h4>
+                        <ul>
+                            <li> <a href="#">CPN-CPS</a></li>
+                            <li> <a href="#">Dentisterie</a></li>
+                            <li> <a href="#">Irologie</a></li>
+                            <li><a href="#">Ophtalmologie</a></li>
+                            <li><a href="#">Pédiatrie</a></li>
+                            <li> <a href="#">Irologie</a></li>
+                            <li><a href="#">Gynécologie</a></li>
+                            <li><a href="#">Pédiatrie</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 footer-newsletter">
+                        <h4>Inscrivez-vous à notre newsletter</h4>
+                        <p>Restez à jour avec les dernières avancées médicales, les conseils de santé et les événements
+                            communautaires en vous abonnant à notre newsletter.</p>
+                        <form action="" method="post">
+                            <input type="email" name="email"><input type="submit" value="Subscribe">
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="container d-md-flex py-4">
+
+            <div class="me-md-auto text-center text-md-start">
+                <div class="copyright">
+                    &copy; Copyright <strong><span>Promedis</span></strong>. Tous droit reservé
+                </div>
+                <div class="credits">
+                   
+                    Concus <a href="https://bootstrapmade.com/">Clinique Promedis</a>
+                </div>
+            </div>
+            <div class="social-links text-center text-md-right pt-3 pt-md-0">
+                <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
+                <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
+                <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
+                <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
+                <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+            </div>
+        </div>
+    </footer> 
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
