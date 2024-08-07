@@ -231,9 +231,8 @@ emailjs.init({
         <h1>Horaires Mensuels </h1>
       </div>
     
-      <div class="container">
-              <div class="container">
-    <input type="text" id="serviceSearch" placeholder="Rechercher par service..." class="form-control mb-4">
+    <div class="container">
+    <input type="text" id="searchInput" placeholder="Rechercher par service ou docteur..." class="form-control mb-4">
     <div id="scheduleList" class="row"></div>
   </div>
         <div class="row" id="scheduleList">
@@ -370,7 +369,10 @@ emailjs.init({
 
       branches.forEach(branch => {
         branch.services?.forEach(service => {
-          if (service.name.toLowerCase().includes(searchTerm.toLowerCase())) {
+          if (
+            service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+            service.doctors?.some(doctor => doctor.name.toLowerCase().includes(searchTerm.toLowerCase()))
+          ) {
             const card = document.createElement('div');
             card.className = 'col-md-4 mb-4';
             card.innerHTML = `
@@ -416,14 +418,16 @@ emailjs.init({
       });
     }
 
-    document.getElementById('serviceSearch').addEventListener('input', function(event) {
-      const searchTerm = event.target.value;
+    function handleSearch() {
+      const searchTerm = document.getElementById('searchInput').value;
       fetchBranch()
         .then(branches => displayBranches(branches, searchTerm))
         .catch(err => {
           console.error('Error fetching branches:', err);
         });
-    });
+    }
+
+    document.getElementById('searchInput').addEventListener('input', handleSearch);
 
     // Fetch and display all branches on initial load
     fetchBranch()
@@ -432,7 +436,6 @@ emailjs.init({
         console.error('Error fetching branches:', err);
       });
   </script>
-
       
       
       
