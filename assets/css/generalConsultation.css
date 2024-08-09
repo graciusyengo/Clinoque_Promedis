@@ -119,8 +119,8 @@ h6 {
   }
 
   @media(max-width:400px){
-    #topbar .contact-info a {
-    font-size: 2px;
+    #topbar .contact-info  {
+    font-size: 12px;
     }
 
   }
