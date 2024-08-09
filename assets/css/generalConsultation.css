@@ -117,6 +117,13 @@ h6 {
     color: #444444;
     transition: 0.3s;
   }
+
+  @media(max-width:345px){
+    #topbar .contact-info a {
+    font-size: 12px;
+    }
+
+  }
   
   #topbar .contact-info a:hover {
     color: #79B733;
