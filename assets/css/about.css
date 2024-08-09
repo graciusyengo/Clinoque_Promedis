@@ -1634,6 +1634,7 @@ body {
     }
     #hero{
         height: 40vh;
+        margin-top: 60px;
     }
     
     
@@ -1817,6 +1818,10 @@ body {
     top: 78px;
     overflow-x: hidden;
 
+}
+.sidebar ul li a.active {
+  color: #5FA599;
+  font-weight: bold;
 }
 
 .sidebar, .know, .sidebar, .name{

@@ -152,7 +152,7 @@
 
       <div class="btn-contact">
 
-      <a href="#appointment" class="appointment-btn scrollto"><span class="d-none d-md-inline"></span> Prenez un
+      <a href="./index.html#appointment" class="appointment-btn scrollto"><span class="d-none d-md-inline"></span> Prenez un
         rendez-vous
 
         
@@ -208,7 +208,7 @@
             <a href="#contact">Nos Contact à Etranger</a>
           </li>
           <li>
-            <Link href="#galerie">Galerie</Link>
+            <a href="#galerie">Galerie</a>
           </li>
         </ul>
       </div>
@@ -504,8 +504,6 @@
             </div>
           </div>
 
-
-
           <div class="infos">
 
             <div class="country">
@@ -779,6 +777,20 @@
 
     <!-- Template Main JS File -->
     <script src="assets/js/main.js"></script>
+
+    <script>
+
+    document.querySelectorAll('.sidebar ul li a').forEach(link => {
+      link.addEventListener('click', function() {
+        // Retirer la classe active de tous les liens
+        document.querySelectorAll('.sidebar ul li a').forEach(item => item.classList.remove('active'));
+    
+        // Ajouter la classe active au lien cliqué
+        this.classList.add('active');
+      });
+    });
+  </script>
+    
 
     <script> 
       const currentURL = window.location.href;  console.log(`L'URL actuelle est : ${currentURL}`);
