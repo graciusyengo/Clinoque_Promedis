@@ -118,7 +118,7 @@ h6 {
     transition: 0.3s;
   }
 
-  @media(max-width:345px){
+  @media(max-width:400px){
     #topbar .contact-info a {
     font-size: 2px;
     }
